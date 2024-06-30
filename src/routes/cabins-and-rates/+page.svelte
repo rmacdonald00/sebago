@@ -1,0 +1,1 @@
+<h1>Cabins & Rates</h1>

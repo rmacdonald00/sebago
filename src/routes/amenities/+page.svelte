@@ -1,0 +1,1 @@
+<h1>Amenities</h1>

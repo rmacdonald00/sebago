@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1 class={'title'}>Sebago Resort</h1>
+
+<style>
+    .title {
+        color: var(--sebago-red)
+    }
+</style>
