@@ -1,9 +1,39 @@
 <script lang="ts">
 	import type { CabinDetails } from "$lib/models/CabinDetails";
+	import AmenityIcon from "./AmenityIcon.svelte";
 
 export let cabin: CabinDetails;
 </script>
 
-<h2>Cabin {cabin.number}</h2>
-<p>Sleeps {cabin.sleepsCount}</p>
-<p>{cabin.description}</p>
+<div class='container'>
+<img src={cabin.imagePath} alt={`Cabin ${cabin.number}`}/>
+<div>
+
+    <h2>Cabin {cabin.number}</h2>
+    <p>{cabin.description}</p>
+    <p>Amenities: {cabin.amenities.join(', ')}</p>
+    <p>Beds:</p>
+    <ul>
+        
+        {#each cabin.beds as bed}
+        <li>{bed.count} {bed.bedType}{bed.count > 1 ? 's' : ''}</li>
+        {/each}
+        </ul>
+    <p>Sleeps {cabin.sleepsCount}</p>
+
+        <p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
+        <p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
+
+        {#each cabin.amenities as amenity}
+            <AmenityIcon {amenity}/>
+        {/each}
+</div>
+</div>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 1rem;
+    }
+</style>

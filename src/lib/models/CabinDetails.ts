@@ -4,10 +4,10 @@ export interface CabinDetails {
     number: number;
     sleepsCount: number;
     beds: BedDescriptor[];
-    nightlyBaseRate: number;
+    dailyBaseRate: number;
     weeklyRate: number;
     description: string;
-    amenities: string[];
+    amenities: Amenity[];
     terms: Terms;
     imagePath: string;
 }
@@ -21,4 +21,10 @@ export enum BedType {
     Double = "Double",
     Twin = "Twin",
     SleeperCouch = "Sleeper Couch"
+}
+
+export enum Amenity {
+    Wifi = "WiFi",
+    Shower = "Shower",
+    Kitchen = "Kitchen"
 }
