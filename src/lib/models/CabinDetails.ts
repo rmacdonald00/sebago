@@ -9,6 +9,7 @@ export interface CabinDetails {
     description: string;
     amenities: string[];
     terms: Terms;
+    imagePath: string;
 }
 
 interface BedDescriptor {

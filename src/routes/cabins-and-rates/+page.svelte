@@ -1,6 +1,6 @@
 <script lang="ts">
 	import CabinDisplay from "$lib/components/CabinDisplay.svelte";
-import { CabinInfo } from "$lib/data/CabinDetails";
+	import { CabinInfo } from "$lib/data/WebsiteContent";
 
     const cabinDescriptions = CabinInfo.sort((a,b) => {return a.number - b.number});
 </script>

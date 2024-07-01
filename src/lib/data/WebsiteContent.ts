@@ -1,4 +1,5 @@
 import { BedType, type CabinDetails } from "$lib/models/CabinDetails";
+import type { SebagoInfo } from "$lib/models/SebagoInfo";
 import type { Terms } from "$lib/models/Terms";
 const BaseTerms: Terms = {
     checkInTime: "3:00 PM",
@@ -18,7 +19,8 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 895.0,
         amenities: ["WiFi", 'Kitchen', 'Shower'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     },
     {
         number: 2,
@@ -31,7 +33,8 @@ export const CabinInfo: CabinDetails[] = [
             { count: 1, bedType: BedType.SleeperCouch }
         ],        weeklyRate: 835.0,
         amenities: ["WiFi", 'Kitchen', 'Shower'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     },
     {
         number: 3,
@@ -43,7 +46,8 @@ export const CabinInfo: CabinDetails[] = [
         ], 
         weeklyRate: 940.0,
         amenities: ["WiFi", 'Kitchen', 'Shower'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     },
     {
         number: 4,
@@ -55,7 +59,8 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 990.0,
         amenities: ["WiFi", 'Kitchen', 'Shower'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     },
     {
         number: 5,
@@ -67,7 +72,8 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 565.0,
         amenities: ["WiFi", 'Kitchen'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     },
     {
         number: 6,
@@ -77,6 +83,54 @@ export const CabinInfo: CabinDetails[] = [
         beds: [{count: 2, bedType: BedType.Double }, {count: 1, bedType: BedType.SleeperCouch }],
         weeklyRate: 700.0,
         amenities: ["WiFi", 'Kitchen'],
-        terms: BaseTerms
+        terms: BaseTerms,
+        imagePath: '',
     }
 ]
+
+export const ReasonsToStayHere: string[] = [
+    'Great fishing',
+    'Shallow swimming area',
+    'Quaint cozy  cottages',
+    'Close to great golf and dining',
+    'Nisswa shopping and events',
+    'Near to Paul Bunyan bike trail',
+    'Simple pleasures, no frills',
+    'Historic - 98 years old this year!!',
+    'Candy and ice cream store',
+    'Perfect for family groups',
+    'Grills and picnic tables',
+    'Fishing boat with cabin. Motors for rent',
+    'Docking privilege of your own boat',
+    'Game garage with ping pong, foosball, air hockey. Sand volleyball court, horseshoes'
+];
+
+export const ThingsToNote: string[] = [
+    'We supply bedding and all kitchen supplies',
+    'Bring your own towels and toiletries',
+    'Rate includes the use of aluminum fishing boat.',
+    'Call for motor availability',
+    'You may bring and dock your own boat',
+    'We have plenty of life jackets',
+    'No air conditioning but a great breeze from the lake and ample fans when needed.',
+    'Wood is available for Franklin stoves when needed.'
+];
+
+export const SebagoDetails: SebagoInfo = {
+    phoneNumber: '913-961-7497',
+    email: 'sebagoresort@yahoo.com',
+    address: {
+        street: '21735 Briarwood Ln',
+        city: 'Nisswa',
+        state: 'MN',
+        zip: '56468'
+    },
+    facebook: {
+        username: 'Sebago Resort',
+        externalLink: 'https://www.facebook.com/people/Sebago-Resort/100070741093493/?fref=ts',
+    },
+    instagram: {
+        username: 'sebagoresort',
+        externalLink: 'https://www.instagram.com/sebagoresort/'
+    }
+}
