@@ -1,3 +1,5 @@
+import type { Terms } from "./Terms";
+
 export interface CabinDetails {
     number: number;
     sleepsCount: number;
@@ -6,9 +8,16 @@ export interface CabinDetails {
     weeklyRate: number;
     description: string;
     amenities: string[];
+    terms: Terms;
 }
 
 interface BedDescriptor {
     count: number;
-    bedType: string;
+    bedType: BedType;
+}
+
+export enum BedType {
+    Double = "Double",
+    Twin = "Twin",
+    SleeperCouch = "Sleeper Couch"
 }
