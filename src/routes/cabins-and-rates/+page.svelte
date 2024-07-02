@@ -9,9 +9,7 @@
 
 <h1>Cabins & Rates</h1>
 
-<span
-	>{RentalTerms.bookingTermsDescription}
-</span>
+<span>{RentalTerms.bookingTermsDescription} </span>
 <p>Check-In Time: {RentalTerms.checkInTime}</p>
 <p>Check-Out Time: {RentalTerms.checkOutTime}</p>
 <ol>

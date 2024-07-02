@@ -6,11 +6,12 @@ export interface SebagoInfo{
     instagram: SocialMedia;    
 }
 
-interface Address {
+export interface Address {
     street: string;
     city: string;
     state: string;
     zip: string;
+    directions: string;
 }
 
 interface SocialMedia {

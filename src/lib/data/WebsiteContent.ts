@@ -6,10 +6,11 @@ export const SebagoDetails: SebagoInfo = {
     phoneNumber: '913-961-7497',
     email: 'sebagoresort@yahoo.com',
     address: {
-        street: '21735 Briarwood Ln',
+        street: '21735 Briarwood Lane',
         city: 'Nisswa',
         state: 'MN',
-        zip: '56468'
+        zip: '56468',
+        directions: 'From MN 371, turn East onto Nashway Road. The Sebago sign is approximately one mile down the road. Turn right, and start a great vacation.',
     },
     facebook: {
         username: 'Sebago Resort',
