@@ -11,7 +11,6 @@ export let cabin: CabinDetails;
 
     <h2>Cabin {cabin.number}</h2>
     <p>{cabin.description}</p>
-    <p>Amenities: {cabin.amenities.join(', ')}</p>
     <p>Beds:</p>
     <ul>
         
@@ -19,11 +18,12 @@ export let cabin: CabinDetails;
         <li>{bed.count} {bed.bedType}{bed.count > 1 ? 's' : ''}</li>
         {/each}
         </ul>
-    <p>Sleeps {cabin.sleepsCount}</p>
-
+        <p>Sleeps {cabin.sleepsCount}</p>
+        
         <p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
         <p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
-
+        
+        <span>Amenities:</span>
         {#each cabin.amenities as amenity}
             <AmenityIcon {amenity}/>
         {/each}
