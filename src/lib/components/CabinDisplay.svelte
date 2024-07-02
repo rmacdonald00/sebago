@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { CabinDetails } from "$lib/models/CabinDetails";
+	import { BedType, type CabinDetails } from "$lib/models/CabinDetails";
 	import AmenityIcon from "./AmenityIcon.svelte";
 
 export let cabin: CabinDetails;
@@ -15,7 +15,7 @@ export let cabin: CabinDetails;
     <ul>
         
         {#each cabin.beds as bed}
-        <li>{bed.count} {bed.bedType}{bed.count > 1 ? 's' : ''}</li>
+        <li>{bed.count} {bed.bedType}{bed.count > 1 ? (bed.bedType == BedType.SleeperCouch ? 'es' : 's') : ''}</li>
         {/each}
         </ul>
         <p>Sleeps {cabin.sleepsCount}</p>
