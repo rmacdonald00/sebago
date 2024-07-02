@@ -8,7 +8,6 @@ export interface CabinDetails {
     weeklyRate: number;
     description: string;
     amenities: Amenity[];
-    terms: Terms;
     imagePath: string;
 }
 

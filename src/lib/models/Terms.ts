@@ -1,5 +1,5 @@
 export interface Terms {
     checkInTime: string;
-    checOutTime: string;
-    minimumNights: number;
+    checkOutTime: string;
+    bookingTermsDescription: string;
 }

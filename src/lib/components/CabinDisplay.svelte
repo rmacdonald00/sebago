@@ -18,7 +18,7 @@ export let cabin: CabinDetails;
         <li>{bed.count} {bed.bedType}{bed.count > 1 ? (bed.bedType == BedType.SleeperCouch ? 'es' : 's') : ''}</li>
         {/each}
         </ul>
-        <p>Sleeps {cabin.sleepsCount}</p>
+        <p>Sleeps: {cabin.sleepsCount}</p>
         
         <p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
         <p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
