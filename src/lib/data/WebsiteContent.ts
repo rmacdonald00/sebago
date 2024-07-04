@@ -171,4 +171,9 @@ export const GalleryImages: ImageInfo[] = [
         altText: 'Sebago store front',
         pathToImage: './cabins/3.jpg'
     },
+    {
+        title: 'Store Front 5',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/2.jpg'
+    },
 ]
