@@ -13,7 +13,6 @@
 <div class={'header'}>
 	<a href="/">Home</a>
 	<a href="/cabins-and-rates">Cabins & Rates</a>
-	<a href="/amenities">Amenities</a>
 	<a href="/gallery">Gallery</a>
 	<a href="/contact-us">Contact Us</a>
 </div>

@@ -136,3 +136,15 @@ export const ThingsToNote: string[] = [
     'Wood is available for Franklin stoves when needed.'
 ];
 
+export const AmenitiesList: string[] = [
+    'Candy and ice cream store',
+    'Family fun',
+    'Sunbathing/swimming dock',
+    '​Free Wi-Fi',
+    'Fully equipped kitchen',
+    'Ping-Pong',
+    'Air hockey and foosball',
+    'Volleyball',
+    'Games and books for check out',
+    'Canoe and paddle boat usage'
+];

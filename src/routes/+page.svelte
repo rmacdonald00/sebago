@@ -1,8 +1,12 @@
+<script>
+	import { AmenitiesList } from '$lib/data/WebsiteContent';
+</script>
+
 <span>Welcome to</span>
 <h1 class={'title'}>Sebago Resort</h1>
 <span>on Round Lake</span>
 <br />
-<img src="./store-front.webp" alt="Outside of the Candy Store." class={'image'}/>
+<img src="./store-front.webp" alt="Outside of the Candy Store." class={'image'} />
 
 <span
 	>Sebago Resort is located in Nisswa, Minnesota on the north side of Round Lake, part of the Gull
@@ -12,12 +16,19 @@
 </span>
 <span> * when available cabins may be rented for a 3 night minimum</span>
 
+<h1>Amenities</h1>
+<ul>
+	{#each AmenitiesList as amenity}
+		<li>{amenity}</li>
+	{/each}
+</ul>
+
 <style>
 	.title {
 		color: var(--sebago-red);
 	}
 
-    .image {
-        width: 200px;
-    }
+	.image {
+		width: 200px;
+	}
 </style>
