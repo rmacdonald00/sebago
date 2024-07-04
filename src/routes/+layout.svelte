@@ -1,11 +1,14 @@
-<svelte:head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-</svelte:head>
-
 <script>
 	import AddressDisplay from '$lib/components/AddressDisplay.svelte';
 	import { SebagoDetails } from '$lib/data/WebsiteContent';
 </script>
+
+<svelte:head>
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+	/>
+</svelte:head>
 
 <div class={'header'}>
 	<a href="/">Home</a>
@@ -20,10 +23,19 @@
 
 <div class={'footer'}>
 	<div class={'sebago-info'}>
+		<span class="material-symbols-outlined"> copyright </span>
+		2024 by Sebago Resort. &nbsp;&nbsp;
 		<AddressDisplay address={SebagoDetails.address} />
-        <p>
-            <span class="material-symbols-outlined"> copyright </span>2024 by Sebago Resort
-        </p>
+	</div>
+	<div>
+		<a href={SebagoDetails.instagram.externalLink}>
+			<span class="material-symbols-outlined"> open_in_new </span>
+			<span>@{SebagoDetails.instagram.username}</span>
+		</a>
+		<a href={SebagoDetails.facebook.externalLink}>
+			<span class="material-symbols-outlined"> open_in_new </span>
+			<span>{SebagoDetails.facebook.username}</span>
+		</a>
 	</div>
 </div>
 
@@ -55,11 +67,16 @@
 		bottom: 0;
 		left: 0;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 2rem;
+		align-items: center;
+		box-sizing: border-box;
 	}
 
 	.sebago-info {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 </style>
