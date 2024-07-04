@@ -21,14 +21,14 @@
 		type="text"
 		maxlength="255"
 		bind:value={contactFormRequest.name}
-		placeholder="Name"
+		placeholder="Name*"
 		required
 	/>
 	<input
 		id="email"
 		type="email"
 		bind:value={contactFormRequest.email}
-		placeholder="Email"
+		placeholder="Email*"
 		required
 	/>
 	<input
