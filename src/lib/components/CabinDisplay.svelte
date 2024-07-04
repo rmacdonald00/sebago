@@ -1,39 +1,41 @@
 <script lang="ts">
-	import { BedType, type CabinDetails } from "$lib/models/CabinDetails";
-	import AmenityIcon from "./AmenityIcon.svelte";
+	import { BedType, type CabinDetails } from '$lib/models/CabinDetails';
+	import AmenityIcon from './AmenityIcon.svelte';
+	import TooltipWrapper from './TooltipWrapper.svelte';
 
-export let cabin: CabinDetails;
+	export let cabin: CabinDetails;
 </script>
 
-<div class='container'>
-<img src={cabin.imagePath} alt={`Cabin ${cabin.number}`}/>
-<div>
-
-    <h2>Cabin {cabin.number}</h2>
-    <p>{cabin.description}</p>
-    <p>Beds:</p>
-    <ul>
-        
-        {#each cabin.beds as bed}
-        <li>{bed.count} {bed.bedType}{bed.count > 1 ? (bed.bedType == BedType.SleeperCouch ? 'es' : 's') : ''}</li>
-        {/each}
-        </ul>
-        <p>Sleeps: {cabin.sleepsCount}</p>
-        
-        <p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
-        <p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
-        
-        <span>Amenities:</span>
-        {#each cabin.amenities as amenity}
-            <AmenityIcon {amenity}/>
-        {/each}
-</div>
+<h2>Cabin {cabin.number}</h2>
+<div class="container">
+	<div>
+		<img src={cabin.imagePath} alt={`Cabin ${cabin.number}`} />
+	</div>
+	<div>
+		<p>{cabin.description}</p>
+		<p>
+			Beds:
+			{cabin.beds
+				.map((bed) => {
+					return `${bed.count} ${bed.bedType}${bed.count > 1 ? (bed.bedType == BedType.SleeperCouch ? 'es' : 's') : ''}`;
+				})
+				.join(', ')}; Sleeps: {cabin.sleepsCount}
+		</p>
+		<span>Amenities:</span>
+		{#each cabin.amenities as amenity}
+			<AmenityIcon {amenity} />&nbsp;
+		{/each}
+	</div>
+	<div>
+		<p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
+		<p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
+	</div>
 </div>
 
 <style>
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        column-gap: 1rem;
-    }
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		column-gap: 1rem;
+	}
 </style>
