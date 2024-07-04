@@ -1,4 +1,5 @@
 import { Amenity, BedType, type CabinDetails } from "$lib/models/CabinDetails";
+import type { ImageInfo } from "$lib/models/ImageInfo";
 import type { SebagoInfo } from "$lib/models/SebagoInfo";
 import type { Terms } from "$lib/models/Terms";
 
@@ -148,3 +149,26 @@ export const AmenitiesList: string[] = [
     'Games and books for check out',
     'Canoe and paddle boat usage'
 ];
+
+export const GalleryImages: ImageInfo[] = [
+    {
+        title: 'Store Front',
+        altText: 'Sebago store front',
+        pathToImage: './store-front.webp'
+    },
+    {
+        title: 'Store Front 2',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/1.jpg'
+    },
+    {
+        title: 'Store Front 3',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/5.jpg'
+    },
+    {
+        title: 'Store Front 4',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/3.jpg'
+    },
+]
