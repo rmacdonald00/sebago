@@ -1,5 +1,6 @@
 <script>
-	import { AmenitiesList } from '$lib/data/WebsiteContent';
+	import ListDisplay from '$lib/components/ListDisplay.svelte';
+	import { AmenitiesList, ReasonsToStayHere, ThingsToNote } from '$lib/data/WebsiteContent';
 </script>
 
 <span>Welcome to</span>
@@ -16,12 +17,9 @@
 </span>
 <span> * when available cabins may be rented for a 3 night minimum</span>
 
-<h1>Amenities</h1>
-<ul>
-	{#each AmenitiesList as amenity}
-		<li>{amenity}</li>
-	{/each}
-</ul>
+<ListDisplay title={'Amenities'} items={AmenitiesList} />
+<ListDisplay title={'Reasons to Stay Here'} items={ReasonsToStayHere} />
+<ListDisplay title={'Things to Note'} items={ThingsToNote} />
 
 <style>
 	.title {
