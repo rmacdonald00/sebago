@@ -24,10 +24,11 @@
 </script>
 
 <svelte:window on:keyup={closeIfEscPressed} />
-
-{#each images as image, index}
-	<ImageDisplay imageInfo={image} onClick={() => openLightBox(index)} />
-{/each}
+<div class={'gallery'}>
+	{#each images as image, index}
+		<ImageDisplay imageInfo={image} onClick={() => openLightBox(index)} />
+	{/each}
+</div>
 
 {#if lightboxOpen}
 	<div class={'lightbox'}>
@@ -123,5 +124,11 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+	}
+
+	.gallery {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
 	}
 </style>

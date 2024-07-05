@@ -176,4 +176,24 @@ export const GalleryImages: ImageInfo[] = [
         altText: 'Sebago store front',
         pathToImage: './cabins/2.jpg'
     },
+    {
+        title: 'Store Front',
+        altText: 'Sebago store front',
+        pathToImage: './store-front.webp'
+    },
+    {
+        title: 'Store Front 2',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/1.jpg'
+    },
+    {
+        title: 'Store Front 3',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/5.jpg'
+    },
+    {
+        title: 'Store Front 4',
+        altText: 'Sebago store front',
+        pathToImage: './cabins/3.jpg'
+    },
 ]
