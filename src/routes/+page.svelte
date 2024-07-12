@@ -1,10 +1,11 @@
 <script>
 	import ListDisplay from '$lib/components/ListDisplay.svelte';
 	import { AmenitiesList, ReasonsToStayHere, ThingsToNote } from '$lib/data/WebsiteContent';
+	import '../styles/text.css';
 </script>
 
 <span>Welcome to</span>
-<h1 class={'title'}>Sebago Resort</h1>
+<h1 class={'title prominent-font'}>Sebago Resort</h1>
 <span>on Round Lake</span>
 <br />
 <img src="./store-front.webp" alt="Outside of the Candy Store." class={'image'} />
