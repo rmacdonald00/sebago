@@ -12,7 +12,7 @@
 	/>
 </svelte:head>
 
-<div class={'vertical-stack'}>
+<div class={'vertical-stack page'}>
 	<PageHeader />
 	<div class={'slot-content'}>
 		<slot />
@@ -23,5 +23,9 @@
 <style>
 	.slot-content {
 		padding: 0.5rem 1rem;
+		flex: 2;
+	}
+	.page {
+		height: 100vh;
 	}
 </style>
