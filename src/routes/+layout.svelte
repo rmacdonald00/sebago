@@ -1,6 +1,6 @@
-<script>
-	import AddressDisplay from '$lib/components/AddressDisplay.svelte';
-	import { SebagoDetails } from '$lib/data/WebsiteContent';
+<script lang="ts">
+	import PageFooter from '$lib/components/PageFooter.svelte';
+	import PageHeader from '$lib/components/PageHeader.svelte';
 	import '../styles/display.css';
 </script>
 
@@ -12,84 +12,15 @@
 </svelte:head>
 
 <div class={'vertical-stack'}>
-	<div class={'header'}>
-		<img class={'image'} src="./sign.jpeg" alt="SEBAGO" />
-		<div class={'nav-bar'}>
-			<a href="/">Home</a>
-			<a href="/cabins-and-rates">Cabins & Rates</a>
-			<a href="/gallery">Gallery</a>
-			<a href="/contact-us">Contact Us</a>
-		</div>
-	</div>
+	<PageHeader />
 	<div class={'slot-content'}>
 		<slot />
 	</div>
-
-	<div class={'footer'}>
-		<div class={'sebago-info'}>
-			<span class="material-symbols-outlined"> copyright </span>
-			2024 by Sebago Resort. &nbsp;&nbsp;
-			<AddressDisplay address={SebagoDetails.address} />
-		</div>
-		<div>
-			<a href={SebagoDetails.instagram.externalLink}>
-				<span class="material-symbols-outlined"> open_in_new </span>
-				<span>@{SebagoDetails.instagram.username}</span>
-			</a>
-			<a href={SebagoDetails.facebook.externalLink}>
-				<span class="material-symbols-outlined"> open_in_new </span>
-				<span>{SebagoDetails.facebook.username}</span>
-			</a>
-		</div>
-	</div>
+	<PageFooter />
 </div>
 
 <style>
-	@media only screen and (max-width: 60rem) {
-	}
-	@media only screen and (min-width: 60rem) {
-	}
-	.image {
-		width: 30vw;
-		min-width: 200px;
-		max-height: inherit;
-		object-fit: contain;
-	}
 	.slot-content {
 		padding: 0.5rem 1rem;
-	}
-	.nav-bar {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		column-gap: 2vw;
-	}
-	.header {
-		background-color: var(--tan);
-		display: flex;
-		flex-wrap: wrap;
-		max-height: 5rem;
-		min-height: 5rem;
-		border-bottom: 2px var(--sebago-red) solid;
-		width: 100%;
-	}
-
-	.footer {
-		background-color: var(--sebago-red);
-		color: var(--white);
-		height: 4rem;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding: 2rem;
-		align-items: center;
-		box-sizing: border-box;
-	}
-
-	.sebago-info {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
 	}
 </style>
