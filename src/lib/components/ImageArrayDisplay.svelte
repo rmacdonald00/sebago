@@ -8,12 +8,12 @@
 
 <div class="zoomed-display">
 	<div class={'image-column'}>
-		<span class={`image-title ${size}`}>{images[focusedImageIndex].title}</span>
 		<img
 			class={'image'}
 			src={images[focusedImageIndex].pathToImage}
 			alt={images[focusedImageIndex].altText}
 		/>
+		<span class={`image-title ${size}`}>{images[focusedImageIndex].title}</span>
 	</div>
 	<div class={'navigation'}>
 		<button
@@ -58,6 +58,7 @@
 	.zoomed-display {
 		width: 100%;
 		position: relative;
+		height: 100%;
 	}
 
 	.navigation {
@@ -82,5 +83,6 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		row-gap: 0.2rem;
 	}
 </style>

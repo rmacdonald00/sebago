@@ -17,8 +17,8 @@ interface BedDescriptor {
 }
 
 export enum BedType {
-    Double = "Double",
-    Twin = "Twin",
+    Double = "Double Bed",
+    Twin = "Twin Bed",
     SleeperCouch = "Sleeper Couch"
 }
 
