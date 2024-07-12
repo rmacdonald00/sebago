@@ -46,7 +46,18 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 895.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/1.jpg',
+        images: [
+            {
+                title: 'Cabin 1',
+                altText: 'Cabin 1',
+                pathToImage: './cabins/1.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     },
     {
         number: 2,
@@ -59,7 +70,18 @@ export const CabinInfo: CabinDetails[] = [
             { count: 1, bedType: BedType.SleeperCouch }
         ], weeklyRate: 835.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/2.jpg',
+        images: [
+            {
+                title: 'Cabin 2',
+                altText: 'Cabin 2',
+                pathToImage: './cabins/2.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     },
     {
         number: 3,
@@ -71,7 +93,18 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 940.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/3.jpg',
+        images: [
+            {
+                title: 'Cabin 3',
+                altText: 'Cabin 3',
+                pathToImage: './cabins/3.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     },
     {
         number: 4,
@@ -83,7 +116,18 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 990.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/4.jpg',
+        images: [
+            {
+                title: 'Cabin 4',
+                altText: 'Cabin 4',
+                pathToImage: './cabins/4.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     },
     {
         number: 5,
@@ -95,7 +139,18 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 565.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen],
-        imagePath: './cabins/5.jpg',
+        images: [
+            {
+                title: 'Cabin 5',
+                altText: 'Cabin 5',
+                pathToImage: './cabins/5.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     },
     {
         number: 6,
@@ -105,7 +160,18 @@ export const CabinInfo: CabinDetails[] = [
         beds: [{ count: 2, bedType: BedType.Double }, { count: 1, bedType: BedType.SleeperCouch }],
         weeklyRate: 700.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen],
-        imagePath: './cabins/6.jpg',
+        images: [
+            {
+                title: 'Cabin 6',
+                altText: 'Cabin 6',
+                pathToImage: './cabins/6.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ]
     }
 ]
 

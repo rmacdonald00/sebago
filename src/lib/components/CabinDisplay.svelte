@@ -1,16 +1,17 @@
 <script lang="ts">
 	import { BedType, type CabinDetails } from '$lib/models/CabinDetails';
 	import AmenityIcon from './AmenityIcon.svelte';
-	import TooltipWrapper from './TooltipWrapper.svelte';
+	import ImageArrayDisplay from './ImageArrayDisplay.svelte';
 
 	export let cabin: CabinDetails;
 </script>
 
 <h2>Cabin {cabin.number}</h2>
 <div class="container">
-	<div>
-		<img src={cabin.imagePath} alt={`Cabin ${cabin.number}`} />
-	</div>
+	<ImageArrayDisplay images={cabin.images} />
+	<!-- <div>
+		<img src={cabin.images[0].pathToImage} alt={`Cabin ${cabin.number}`} />
+	</div> -->
 	<div>
 		<p>{cabin.description}</p>
 		<p>

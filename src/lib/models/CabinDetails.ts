@@ -1,4 +1,4 @@
-import type { Terms } from "./Terms";
+import type { ImageInfo } from "./ImageInfo";
 
 export interface CabinDetails {
     number: number;
@@ -8,7 +8,7 @@ export interface CabinDetails {
     weeklyRate: number;
     description: string;
     amenities: Amenity[];
-    imagePath: string;
+    images: ImageInfo[];
 }
 
 interface BedDescriptor {
