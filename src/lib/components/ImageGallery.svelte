@@ -40,7 +40,7 @@
 	.lightbox {
 		background-color: rgba(0, 0, 0, 0.8);
 		position: fixed;
-		padding: 1rem;
+		padding-top: 1rem;
 		top: 0;
 		left: 0;
 		height: 100%;

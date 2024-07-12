@@ -17,3 +17,9 @@
 		<CabinDisplay {cabin} />
 	{/each}
 </ol>
+
+<style>
+	ol {
+		padding: 0;
+	}
+</style>

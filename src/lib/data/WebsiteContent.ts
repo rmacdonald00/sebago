@@ -1,7 +1,7 @@
 import { Amenity, BedType, type CabinDetails } from "$lib/models/CabinDetails";
-import type { ImageInfo } from "$lib/models/ImageInfo";
 import type { SebagoInfo } from "$lib/models/SebagoInfo";
 import type { Terms } from "$lib/models/Terms";
+import type { WebsiteImages } from "$lib/models/WebsiteImages";
 
 export const SebagoDetails: SebagoInfo = {
     phoneNumber: '913-961-7497',
@@ -216,50 +216,77 @@ export const AmenitiesList: string[] = [
     'Canoe and paddle boat usage'
 ];
 
-export const GalleryImages: ImageInfo[] = [
-    {
-        title: 'Store Front',
-        altText: 'Sebago store front',
-        pathToImage: './store-front.webp'
+export const WebsiteImagesConfig: WebsiteImages = {
+    Welcome: {
+        pathToImage: './store-front.webp',
+        altText: 'Outside of the Candy Store.',
+        title: 'Store Front'
     },
-    {
-        title: 'Store Front 2',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/1.jpg'
+    Amenities: {
+        pathToImage: './dock.webp',
+        altText: 'Dock',
+        title: 'Dock'
     },
-    {
-        title: 'Store Front 3',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/5.jpg'
+    ReasonsToStay: {
+        pathToImage: './frog.webp',
+        altText: 'frog',
+        title: 'frog'
     },
-    {
-        title: 'Store Front 4',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/3.jpg'
+    ThingsToNote: {
+        pathToImage: './canoe.webp',
+        altText: 'canoe',
+        title: 'canoe'
     },
-    {
-        title: 'Store Front 5',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/2.jpg'
+    ContactUs: {
+        pathToImage: './welcome.webp',
+        altText: 'welcome',
+        title: 'welcome'
     },
-    {
-        title: 'Store Front',
-        altText: 'Sebago store front',
-        pathToImage: './store-front.webp'
-    },
-    {
-        title: 'Store Front 2',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/1.jpg'
-    },
-    {
-        title: 'Store Front 3',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/5.jpg'
-    },
-    {
-        title: 'Store Front 4',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/3.jpg'
-    },
-]
+    GalleryImages: [
+        {
+            title: 'Store Front',
+            altText: 'Sebago store front',
+            pathToImage: './store-front.webp'
+        },
+        {
+            title: 'Store Front 2',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/1.jpg'
+        },
+        {
+            title: 'Store Front 3',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/5.jpg'
+        },
+        {
+            title: 'Store Front 4',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/3.jpg'
+        },
+        {
+            title: 'Store Front 5',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/2.jpg'
+        },
+        {
+            title: 'Store Front',
+            altText: 'Sebago store front',
+            pathToImage: './store-front.webp'
+        },
+        {
+            title: 'Store Front 2',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/1.jpg'
+        },
+        {
+            title: 'Store Front 3',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/5.jpg'
+        },
+        {
+            title: 'Store Front 4',
+            altText: 'Sebago store front',
+            pathToImage: './cabins/3.jpg'
+        },
+    ]
+};

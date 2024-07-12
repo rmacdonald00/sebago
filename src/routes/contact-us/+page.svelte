@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { SebagoDetails } from '$lib/data/WebsiteContent';
+	import ImageAndContentRow from '$lib/components/ImageAndContentRow.svelte';
+	import { SebagoDetails, WebsiteImagesConfig } from '$lib/data/WebsiteContent';
 	import type { ContactFormRequest } from '$lib/models/ContactFormRequest';
 
 	const contactFormRequest: ContactFormRequest = {
@@ -16,9 +17,9 @@
 </script>
 
 <h1>Contact Us</h1>
-<form on:submit={submitContactForm}>
-	<div class={'form-inputs'}>
-		<div class={'left-col'}>
+<ImageAndContentRow image={WebsiteImagesConfig.ContactUs} imageSide={'right'}>
+	<form on:submit={submitContactForm}>
+		<div class={'vertical-stack contact-form'}>
 			<input
 				id="name"
 				type="text"
@@ -41,31 +42,29 @@
 				bind:value={contactFormRequest.subject}
 				placeholder="Subject"
 			/>
+			<textarea
+				id="message"
+				bind:value={contactFormRequest.message}
+				placeholder="Message"
+				class={'message-input'}
+			/>
+			<button type="submit">Send</button>
 		</div>
-		<textarea
-			id="message"
-			bind:value={contactFormRequest.message}
-			placeholder="Message"
-			class={'message-input'}
-		/>
-		<button type="submit">Send</button>
-	</div>
-</form>
+	</form>
 
-<div>
-	You can also call or email us directly at {SebagoDetails.phoneNumber} or {SebagoDetails.email}
-</div>
+	<div>
+		You can also call or email us directly at {SebagoDetails.phoneNumber} or {SebagoDetails.email}
+	</div>
+</ImageAndContentRow>
 
 <style>
-	.form-inputs {
-		display: grid;
-		width: 100%;
-		grid-template-columns: 3fr 3fr 1fr;
+	.contact-form {
+		row-gap: 0.5rem;
 	}
 
-	.left-col {
-		display: flex;
-		flex-direction: column;
+	input,
+	textarea {
+		min-height: 1.5rem;
 	}
 
 	.message-input {
