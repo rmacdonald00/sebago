@@ -1,7 +1,6 @@
 <script>
 	import ListDisplay from '$lib/components/ListDisplay.svelte';
 	import { AmenitiesList, ReasonsToStayHere, ThingsToNote } from '$lib/data/WebsiteContent';
-	import '../styles/text.css';
 </script>
 
 <span>Welcome to</span>
