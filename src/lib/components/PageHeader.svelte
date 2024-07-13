@@ -5,6 +5,7 @@
 	<img class={'image'} src="./sign.jpeg" alt="SEBAGO" />
 	<div class={'nav-bar'}>
 		<a href="/">Home</a>
+		<a href="/about">About</a>
 		<a href="/cabins-and-rates">Cabins & Rates</a>
 		<a href="/gallery">Gallery</a>
 		<a href="/contact-us">Contact Us</a>
