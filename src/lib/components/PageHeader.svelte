@@ -21,7 +21,7 @@
 	.image {
 		width: 30vw;
 		min-width: 200px;
-		max-height: inherit;
+		max-height: 4.5rem;
 		object-fit: contain;
 	}
 	.nav-bar {
@@ -36,7 +36,6 @@
 		background-color: var(--tan);
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0.3rem;
 		justify-content: center;
 		align-items: center;
 		max-height: 5rem;
