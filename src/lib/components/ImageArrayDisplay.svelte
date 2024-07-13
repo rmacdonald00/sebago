@@ -4,18 +4,19 @@
 	export let images: ImageInfo[];
 	export let focusedImageIndex: number = 0;
 	export let size: 'full-screen' | 'inline' = 'inline';
+	export let theme: 'light' | 'dark' = 'light';
 </script>
 
-<div class="zoomed-display">
+<div class="zoomed-display" class:light={theme === 'light'} class:dark={theme === 'dark'}>
 	<div class={'image-column'}>
 		<img
 			class={'image'}
 			src={images[focusedImageIndex].pathToImage}
 			alt={images[focusedImageIndex].altText}
 		/>
-		<div class={'info-bar'}>
-			<span class={`image-title ${size}`}>{images[focusedImageIndex].title}</span>
+		<div class={`info-bar ${size}`}>
 			<span>{focusedImageIndex + 1} of {images.length}</span>
+			<span>{images[focusedImageIndex].title}</span>
 		</div>
 	</div>
 	<div class={'navigation'}>
@@ -37,15 +38,11 @@
 </div>
 
 <style>
-	.image-title {
-		color: var(--white);
+	.info-bar.full-screen {
+		font-size: 2rem;
 	}
 
-	.image-title.full-screen {
-		font-size: 3rem;
-	}
-
-	.image-title.inline {
+	.info-bar.inline {
 		font-size: 1rem;
 	}
 
@@ -55,10 +52,17 @@
 		padding: 0;
 		height: 100%;
 		width: 100%;
-		color: var(--white);
-		opacity: 40%;
+		opacity: 55%;
 	}
 
+	.light .navigation *,
+	.light .image-column * {
+		color: var(--white);
+	}
+
+	.dark .navigation * {
+		color: var(--dark-tan);
+	}
 	.material-symbols-outlined {
 		font-size: 5rem;
 	}
@@ -71,7 +75,7 @@
 	}
 
 	.navigation-button:hover {
-		opacity: 800%;
+		opacity: 100%;
 	}
 
 	.navigation-button:disabled {

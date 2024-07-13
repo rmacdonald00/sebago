@@ -6,15 +6,17 @@
 	export let onClick: () => void;
 </script>
 
-<button class={'image-display'} on:click={onClick}>
+<div class={'vertical-stack'}>
+	<button class={'image-display'} on:click={onClick}>
+		<img
+			class={'image'}
+			class:square={aspectRatio === 'square'}
+			src={imageInfo.pathToImage}
+			alt={imageInfo.altText}
+		/>
+	</button>
 	<div class="title"><span>{imageInfo.title}</span></div>
-	<img
-		class={'image'}
-		class:square={aspectRatio === 'square'}
-		src={imageInfo.pathToImage}
-		alt={imageInfo.altText}
-	/>
-</button>
+</div>
 
 <style>
 	.image-display {
@@ -36,17 +38,7 @@
 	}
 
 	.title {
-		position: absolute;
-		width: 100%;
-		visibility: hidden;
-		font-size: 2rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: rgba(255, 255, 255, 0.7);
-	}
-
-	.image-display:hover .title {
-		visibility: visible;
+		font-size: 1.5rem;
+		text-align: center;
 	}
 </style>

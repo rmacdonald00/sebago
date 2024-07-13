@@ -34,7 +34,7 @@
 <p>{getDescription()}</p>
 <div class="container">
 	<div class={'images'}>
-		<ImageArrayDisplay images={cabin.images} />
+		<ImageArrayDisplay images={cabin.images} theme={'dark'} />
 	</div>
 	<div class={'divider'} />
 	<div class={'booking-info'}>
