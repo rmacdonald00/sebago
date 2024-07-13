@@ -62,11 +62,24 @@
 		row-gap: 0.5rem;
 	}
 
+	.contact-form * {
+		font-family: 'Text-Font';
+		font-size: 1rem;
+	}
+
 	input,
 	textarea {
 		min-height: 1.5rem;
 	}
 
+	form:invalid button {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	input:invalid {
+		color: var(--sebago-red);
+	}
 	.message-input {
 		resize: none;
 	}
