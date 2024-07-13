@@ -26,6 +26,8 @@
 	.nav-bar {
 		display: flex;
 		flex-direction: row;
+		white-space: nowrap;
+		flex: 2;
 		justify-content: center;
 		column-gap: 2vw;
 	}
@@ -33,6 +35,9 @@
 		background-color: var(--tan);
 		display: flex;
 		flex-wrap: wrap;
+		padding: 0.3rem;
+		justify-content: center;
+		align-items: center;
 		max-height: 5rem;
 		min-height: 5rem;
 		border-bottom: 2px var(--sebago-red) solid;
