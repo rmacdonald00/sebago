@@ -36,6 +36,7 @@
 	<div class={'images'}>
 		<ImageArrayDisplay images={cabin.images} />
 	</div>
+	<div class={'divider'} />
 	<div class={'booking-info'}>
 		<p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
 		<p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
@@ -47,6 +48,7 @@
 	.container {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 1rem;
 	}
 	.images {
 		height: 30rem;
@@ -54,6 +56,7 @@
 	.booking-info {
 		justify-content: center;
 		align-items: center;
+		flex: 2;
 	}
 	@media only screen and (min-width: 60rem) {
 		.images {
@@ -62,6 +65,9 @@
 		.booking-info {
 			display: flex;
 			flex-direction: column;
+		}
+		.divider {
+			border-right: 0.3rem var(--dark-tan) dotted;
 		}
 	}
 
@@ -74,6 +80,11 @@
 			flex-direction: row;
 			width: 100%;
 			justify-content: space-around;
+		}
+
+		.divider {
+			width: 100%;
+			border-bottom: 0.3rem var(--dark-tan) dotted;
 		}
 	}
 </style>

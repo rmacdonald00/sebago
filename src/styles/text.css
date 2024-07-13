@@ -8,3 +8,11 @@ h2 {
     color: var(--sebago-red);
     letter-spacing: 0.1rem;
 }
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}

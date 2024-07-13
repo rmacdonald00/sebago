@@ -32,15 +32,15 @@
 
 {#if lightboxOpen}
 	<div class={'lightbox'}>
-		<ImageArrayDisplay {images} focusedImageIndex={zoomedImageIndex} />
 		<button class={'close-button'} on:click={closeLightbox}>Close</button>
+		<ImageArrayDisplay {images} focusedImageIndex={zoomedImageIndex} />
 	</div>{/if}
 
 <style>
 	.lightbox {
 		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
 		position: fixed;
-		padding-top: 1rem;
 		top: 0;
 		left: 0;
 		height: 100%;
@@ -49,15 +49,18 @@
 		overflow-y: scroll;
 		overflow-x: hidden;
 		display: grid;
-		grid-template-rows: auto max(3rem, 10%);
-		row-gap: 1rem;
+		grid-template-rows: max(2rem, 5%) auto;
 	}
 
 	.close-button {
 		background-color: transparent;
-		border: 2px white solid;
+		border: none;
 		padding: 0;
 		color: var(--white);
+	}
+
+	.close-button:hover {
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 
 	.gallery {
