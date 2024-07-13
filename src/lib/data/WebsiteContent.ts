@@ -222,6 +222,7 @@ export const AmenitiesList: string[] = [
     'Games and books for check out',
     'Canoe and paddle boat usage'
 ];
+import GalleryImagesData from './GalleryImages.json';
 
 export const WebsiteImagesConfig: WebsiteImages = {
     Welcome: {
@@ -249,51 +250,5 @@ export const WebsiteImagesConfig: WebsiteImages = {
         altText: 'welcome',
         title: 'welcome'
     },
-    GalleryImages: [
-        {
-            title: 'Store Front',
-            altText: 'Sebago store front',
-            pathToImage: './store-front.webp'
-        },
-        {
-            title: 'Store Front 2',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/1.jpg'
-        },
-        {
-            title: 'Store Front 3',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/5.jpg'
-        },
-        {
-            title: 'Store Front 4',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/3.jpg'
-        },
-        {
-            title: 'Store Front 5',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/2.jpg'
-        },
-        {
-            title: 'Store Front',
-            altText: 'Sebago store front',
-            pathToImage: './store-front.webp'
-        },
-        {
-            title: 'Store Front 2',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/1.jpg'
-        },
-        {
-            title: 'Store Front 3',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/5.jpg'
-        },
-        {
-            title: 'Store Front 4',
-            altText: 'Sebago store front',
-            pathToImage: './cabins/3.jpg'
-        },
-    ]
+    GalleryImages: GalleryImagesData
 };
