@@ -51,8 +51,6 @@
 		height: 100%;
 		width: 100%;
 		z-index: 10;
-		overflow-y: scroll;
-		overflow-x: hidden;
 		display: grid;
 		grid-template-rows: max(2rem, 5%) auto;
 	}
