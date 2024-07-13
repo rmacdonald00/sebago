@@ -2,12 +2,18 @@
 	import type { ImageInfo } from '$lib/models/ImageInfo';
 
 	export let imageInfo: ImageInfo;
+	export let aspectRatio: 'square' | 'original' = 'original';
 	export let onClick: () => void;
 </script>
 
 <button class={'image-display'} on:click={onClick}>
 	<div class="title"><span>{imageInfo.title}</span></div>
-	<img class={'image'} src={imageInfo.pathToImage} alt={imageInfo.altText} />
+	<img
+		class={'image'}
+		class:square={aspectRatio === 'square'}
+		src={imageInfo.pathToImage}
+		alt={imageInfo.altText}
+	/>
 </button>
 
 <style>
@@ -17,6 +23,11 @@
 		padding: 0;
 		position: relative;
 		cursor: pointer;
+	}
+
+	.square {
+		aspect-ratio: 1;
+		object-fit: cover;
 	}
 
 	.image {

@@ -26,7 +26,7 @@
 <svelte:window on:keyup={closeIfEscPressed} />
 <div class={'gallery'}>
 	{#each images as image, index}
-		<ImageDisplay imageInfo={image} onClick={() => openLightBox(index)} />
+		<ImageDisplay aspectRatio={'square'} imageInfo={image} onClick={() => openLightBox(index)} />
 	{/each}
 </div>
 
@@ -64,5 +64,6 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+		grid-template-rows: repeat(auto-fit, minmax(20rem, auto));
 	}
 </style>
