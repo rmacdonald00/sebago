@@ -22,6 +22,14 @@
 <ListDisplay title={'Reasons to Stay Here'} items={ReasonsToStayHere} />
 <ListDisplay title={'Things to Note'} items={ThingsToNote} />
 
+<iframe
+	width="100%"
+	height="800"
+	title="amphitheater panorama"
+	style="border-style:none;"
+	src="https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json"
+></iframe>
+
 <style>
 	.title {
 		color: var(--sebago-red);
