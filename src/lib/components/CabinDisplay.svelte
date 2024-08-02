@@ -4,6 +4,8 @@
 	import ImageArrayDisplay from './ImageArrayDisplay.svelte';
 
 	export let cabin: CabinDetails;
+	let showPanorama = false;
+	let panoramaHasShown = false;
 
 	const generateBedDescription = () => {
 		const bedStrings = cabin.beds.map((bed) => {
@@ -24,6 +26,12 @@
 		return `This cabin sleeps ${cabin.sleepsCount}. It has ${bedString}.`;
 	};
 
+	const toggleVisualType = () => {
+		showPanorama = !showPanorama;
+		//because it starts false; indicates if iframe should stay on page so it doesn't need to reload
+		panoramaHasShown = true;
+	};
+
 	const getDescription = () => {
 		//TODO: all the info can just go in a paragraph
 		return `${cabin.description} ${generateBedDescription()}`;
@@ -34,7 +42,24 @@
 <p>{getDescription()}</p>
 <div class="container">
 	<div class={'images'}>
-		<ImageArrayDisplay images={cabin.images} theme={'dark'} />
+		{#if !showPanorama}
+			<ImageArrayDisplay images={cabin.images} theme={'dark'} />
+		{/if}
+		{#if panoramaHasShown}
+			<iframe
+				class:isVisible={showPanorama}
+				title="amphitheater panorama"
+				style="border-style:none;"
+				src="https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json"
+				allow="accelerometer https://webhost.rjmac.dev; gyroscope https://webhost.rjmac.dev"
+			></iframe>
+		{/if}
+		<div class="visual-selector">
+			<button on:click={toggleVisualType}>
+				{showPanorama ? 'See Images' : 'See Inside'}
+				<span class="material-symbols-outlined"> visibility </span>
+			</button>
+		</div>
 	</div>
 	<div class={'divider'} />
 	<div class={'booking-info'}>
@@ -45,6 +70,32 @@
 </div>
 
 <style>
+	iframe {
+		height: 100%;
+		display: none;
+		width: 100%;
+	}
+
+	iframe.isVisible {
+		display: block;
+	}
+
+	.visual-selector {
+		display: flex;
+		justify-content: right;
+	}
+
+	.visual-selector button {
+		background-color: var(--dark-tan);
+		border: none;
+		padding: 0.3rem 0.5rem;
+		display: flex;
+		align-items: center;
+		column-gap: 0.5rem;
+		font-family: 'Text-Font';
+		font-size: large;
+	}
+
 	.container {
 		display: flex;
 		flex-wrap: wrap;
@@ -52,6 +103,9 @@
 	}
 	.images {
 		height: 30rem;
+		display: grid;
+		grid-template-rows: auto 2.5rem;
+		row-gap: 0.3rem;
 	}
 	.booking-info {
 		justify-content: center;
