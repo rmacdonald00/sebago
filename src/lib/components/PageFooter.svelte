@@ -36,6 +36,7 @@
 		padding: 2rem;
 		align-items: center;
 		box-sizing: border-box;
+		font-size: 1rem;
 	}
 
 	.sebago-info {
