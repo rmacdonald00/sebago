@@ -10,11 +10,11 @@
 		<AddressDisplay address={SebagoDetails.address} />
 	</div>
 	<div>
-		<a href={SebagoDetails.instagram.externalLink}>
+		<a href={SebagoDetails.instagram.externalLink} target="_blank">
 			<span class="material-symbols-outlined"> open_in_new </span>
 			<span>@{SebagoDetails.instagram.username}</span>
 		</a>
-		<a href={SebagoDetails.facebook.externalLink}>
+		<a href={SebagoDetails.facebook.externalLink} target="_blank">
 			<span class="material-symbols-outlined"> open_in_new </span>
 			<span>{SebagoDetails.facebook.username}</span>
 		</a>
@@ -22,6 +22,9 @@
 </div>
 
 <style>
+	a {
+		color: var(--white);
+	}
 	.footer {
 		background-color: var(--sebago-red);
 		color: var(--white);
