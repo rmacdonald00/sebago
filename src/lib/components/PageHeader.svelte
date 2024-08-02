@@ -13,9 +13,12 @@
 </div>
 
 <style>
-	@media only screen and (max-width: 60rem) {
+	@media only screen and (max-width: 30rem) {
+		.nav-bar a {
+			display: none;
+		}
 	}
-	@media only screen and (min-width: 60rem) {
+	@media only screen and (min-width: 30rem) {
 	}
 
 	.header-title {

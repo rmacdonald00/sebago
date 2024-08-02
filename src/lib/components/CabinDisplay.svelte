@@ -94,6 +94,7 @@
 		column-gap: 0.5rem;
 		font-family: 'Text-Font';
 		font-size: large;
+		color: black;
 	}
 
 	.container {

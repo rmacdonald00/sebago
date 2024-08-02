@@ -13,7 +13,7 @@
 </div>
 
 <style>
-	@media only screen and (min-width: 30rem) {
+	@media only screen and (min-width: 35rem) {
 		.container {
 			display: flex;
 			flex-direction: row;
@@ -34,7 +34,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 30rem) {
+	@media only screen and (max-width: 35rem) {
 		.container {
 			display: flex;
 			flex-direction: column;

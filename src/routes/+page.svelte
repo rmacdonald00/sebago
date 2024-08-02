@@ -9,8 +9,8 @@
 	} from '$lib/data/WebsiteContent';
 </script>
 
+<h1>Welcome!</h1>
 <ImageAndContentRow image={WebsiteImagesConfig.Welcome} imageSide={'right'}>
-	<h1>Welcome!</h1>
 	<div>
 		Sebago Resort is located in Nisswa, Minnesota on the north side of Round Lake, part of the Gull
 		Lake Chain in north-central Minnesota. Built in 1926 we have sought to keep Sebago simple and
