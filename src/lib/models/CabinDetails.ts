@@ -9,6 +9,8 @@ export interface CabinDetails {
     description: string;
     amenities: Amenity[];
     images: ImageInfo[];
+    insidePanoramaSource: string;
+    insidePanoramaHost: string;
 }
 
 interface BedDescriptor {

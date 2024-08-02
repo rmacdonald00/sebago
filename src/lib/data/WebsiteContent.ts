@@ -64,7 +64,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 2,
@@ -88,7 +90,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 3,
@@ -111,7 +115,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 4,
@@ -134,7 +140,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 5,
@@ -157,7 +165,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 6,
@@ -178,7 +188,9 @@ export const CabinInfo: CabinDetails[] = [
                 altText: 'Sebago store front',
                 pathToImage: './store-front.webp'
             },
-        ]
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     }
 ]
 

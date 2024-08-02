@@ -50,8 +50,8 @@
 				class:isVisible={showPanorama}
 				title="amphitheater panorama"
 				style="border-style:none;"
-				src="https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json"
-				allow="accelerometer https://webhost.rjmac.dev; gyroscope https://webhost.rjmac.dev"
+				src={cabin.insidePanoramaSource}
+				allow={`accelerometer ${cabin.insidePanoramaHost}; gyroscope ${cabin.insidePanoramaHost}`}
 			></iframe>
 		{/if}
 		<div class="visual-selector">
