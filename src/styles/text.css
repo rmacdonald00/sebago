@@ -1,13 +1,22 @@
 .prominent-font {
     font-family: 'Prominent-Font';
+
 }
 
 h1,
 h2 {
     font-family: 'Prominent-Font';
     color: var(--sebago-red);
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.2rem; */
 }
+
+/* h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+} */
 
 .left-align {
     text-align: left;

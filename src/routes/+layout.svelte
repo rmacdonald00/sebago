@@ -22,8 +22,9 @@
 
 <style>
 	.slot-content {
-		padding: 0.5rem 1rem;
+		padding: 1rem;
 		flex: 2;
+		box-sizing: border-box;
 	}
 	.page {
 		height: 100vh;

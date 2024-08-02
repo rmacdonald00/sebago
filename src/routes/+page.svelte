@@ -10,11 +10,7 @@
 </script>
 
 <ImageAndContentRow image={WebsiteImagesConfig.Welcome} imageSide={'right'}>
-	<span class={'title'}
-		>Welcome to
-		<span class={'prominent-font'}>Sebago Resort</span>
-		on Round Lake</span
-	>
+	<h1>Welcome!</h1>
 	<div>
 		Sebago Resort is located in Nisswa, Minnesota on the north side of Round Lake, part of the Gull
 		Lake Chain in north-central Minnesota. Built in 1926 we have sought to keep Sebago simple and
@@ -37,10 +33,3 @@
 <ImageAndContentRow image={WebsiteImagesConfig.ThingsToNote} imageSide={'left'}>
 	<ListDisplay title={'Things to Note'} items={ThingsToNote} />
 </ImageAndContentRow>
-
-<style>
-	.title {
-		color: var(--sebago-red);
-		font-size: x-large;
-	}
-</style>
