@@ -5,10 +5,6 @@ class MongoDatabase {
     private mongoClient: MongoClient | undefined;
 
     private async getDb(): Promise<Db> {
-        if (!this.mongoClient) {
-            await this.openConnection();
-        }
-
         return this.mongoClient!.db('sebago-website-dev');
     }
 
@@ -19,8 +15,12 @@ class MongoDatabase {
     }
 
     public async openConnection() {
-        console.log("Opening Mongo Connection...", new Date());
-        this.mongoClient = await MongoClient.connect(MONGO_CONNECTION_STRING);
+        try {
+            console.log("Opening Mongo Connection...", new Date());
+            this.mongoClient = await MongoClient.connect(MONGO_CONNECTION_STRING);
+        } catch (e) {
+            console.error("Unable to connect to Mongo", e);
+        }
     }
 
     public async closeConnection() {
