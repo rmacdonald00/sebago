@@ -3,6 +3,7 @@
 
 	const toggleVerticalNav = () => {
 		isExpanded = !isExpanded;
+		document.documentElement.style.overflow = isExpanded ? 'hidden' : 'scroll';
 	};
 
 	const navigationRoutes: { href: string; title: string }[] = [
@@ -14,19 +15,22 @@
 	];
 </script>
 
-<div class={'nav-bar-horizontal'}>
+<div class={'horizontal-nav'}>
 	{#each navigationRoutes as route}
 		<a href={route.href}>{route.title}</a>
 	{/each}
 </div>
 
-<div class={'nav-bar-vertical'}>
+<div class={'vertical-nav'}>
 	<button on:click={toggleVerticalNav}>
 		<span class="material-symbols-outlined"> menu </span></button
 	>
 	{#if isExpanded}
-		<div class="vertical-nav-bar">
-			<button on:click={toggleVerticalNav}>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div class="background-overlay" on:click={toggleVerticalNav}></div>
+		<div class="expanded-nav-box">
+			<button on:click={toggleVerticalNav} class="close-button">
 				<span class="material-symbols-outlined"> close </span></button
 			>
 			{#each navigationRoutes as route}
@@ -38,43 +42,70 @@
 
 <style>
 	button {
-		background-color: var(--sebago-red);
-		color: var(--white);
+		background-color: transparent;
+		color: var(--sebago-red);
 		height: 100%;
 		border: none;
 	}
-	button .material-symbols-outlined {
+	.vertical-nav > button .material-symbols-outlined {
+		font-size: 3rem;
+		padding: 0.3rem 0.1rem;
+	}
+	.close-button {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		color: var(--white);
+		margin-bottom: 0.5rem;
+		height: 3rem;
+	}
+
+	.close-button .material-symbols-outlined {
 		font-size: 2rem;
 	}
 	@media only screen and (max-width: 30rem) {
-		.nav-bar-horizontal,
-		.nav-bar-horizontal a {
+		.horizontal-nav,
+		.horizontal-nav a {
 			display: none;
 		}
 	}
 	@media only screen and (min-width: 30rem) {
-		.nav-bar-vertical {
+		.vertical-nav {
 			display: none;
 		}
 	}
-	.vertical-nav-bar {
+
+	.background-overlay {
+		background-color: rgba(0, 0, 0, 0.43);
+		z-index: 5;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: 100vh;
+	}
+	.expanded-nav-box {
 		background-color: var(--sebago-red);
 		color: var(--white);
 		position: fixed;
 		top: 0;
 		right: 0;
-		/* height: 100%; */
+		text-align: right;
+		font-size: larger;
 		width: 50%;
+		height: 100%;
 		z-index: 10;
-		display: grid;
+		display: flex;
+		flex-direction: column;
 	}
 
-	.vertical-nav-bar a {
+	.expanded-nav-box a {
 		color: var(--white);
 		height: 3rem;
 		align-items: center;
+		padding-right: 1rem;
 	}
-	.nav-bar-horizontal {
+	.horizontal-nav {
 		display: flex;
 		flex-direction: row;
 		white-space: nowrap;

@@ -12,6 +12,7 @@
 		color: var(--sebago-red);
 		font-size: 4.5rem;
 		font-family: 'Impact';
+		margin-left: 1rem;
 	}
 
 	.header {
@@ -22,7 +23,6 @@
 		align-items: center;
 		border-bottom: 2px var(--sebago-red) solid;
 		width: 100%;
-		padding: 0 1rem;
 		box-sizing: border-box;
 	}
 </style>
