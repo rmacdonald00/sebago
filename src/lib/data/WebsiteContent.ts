@@ -1,7 +1,7 @@
 import { Amenity, BedType, type CabinDetails } from "$lib/models/CabinDetails";
-import type { ImageInfo } from "$lib/models/ImageInfo";
 import type { SebagoInfo } from "$lib/models/SebagoInfo";
 import type { Terms } from "$lib/models/Terms";
+import type { WebsiteImages } from "$lib/models/WebsiteImages";
 
 export const SebagoDetails: SebagoInfo = {
     phoneNumber: '913-961-7497',
@@ -22,6 +22,13 @@ export const SebagoDetails: SebagoInfo = {
         externalLink: 'https://www.instagram.com/sebagoresort/'
     }
 }
+
+export const AboutSebagoSections: string[] = [
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra diam sit amet nisl suscipit. Faucibus nisl tincidunt eget nullam non nisi est. Nisi vitae suscipit tellus mauris a diam maecenas sed. In eu mi bibendum neque egestas congue quisque. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Eu consequat ac felis donec et odio pellentesque diam volutpat. Cras pulvinar mattis nunc sed. Scelerisque purus semper eget duis at tellus. Amet nulla facilisi morbi tempus iaculis urna. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Eget felis eget nunc lobortis mattis aliquam faucibus purus.',
+    'Aliquam purus sit amet luctus venenatis lectus. Proin sagittis nisl rhoncus mattis rhoncus. Lorem ipsum dolor sit amet consectetur. Faucibus nisl tincidunt eget nullam non. Quisque egestas diam in arcu. Ac turpis egestas maecenas pharetra. At augue eget arcu dictum varius duis at consectetur. Gravida neque convallis a cras semper. Gravida cum sociis natoque penatibus et magnis dis. Diam sit amet nisl suscipit adipiscing. Nulla aliquet enim tortor at auctor urna. Tempor orci eu lobortis elementum nibh tellus molestie nunc non. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Enim nunc faucibus a pellentesque sit amet porttitor eget. Pretium vulputate sapien nec sagittis.',
+    'Suspendisse interdum consectetur libero id faucibus. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Scelerisque eleifend donec pretium vulputate. Netus et malesuada fames ac turpis. Tincidunt lobortis feugiat vivamus at augue eget arcu. Elit scelerisque mauris pellentesque pulvinar pellentesque. Dictum sit amet justo donec. Id venenatis a condimentum vitae sapien pellentesque. Purus in massa tempor nec feugiat nisl pretium fusce id. Risus quis varius quam quisque id diam vel. A lacus vestibulum sed arcu. Gravida quis blandit turpis cursus in. At tellus at urna condimentum. At quis risus sed vulputate. Imperdiet dui accumsan sit amet nulla. Odio ut sem nulla pharetra diam. A diam sollicitudin tempor id. Nisi lacus sed viverra tellus in hac.',
+];
+
 
 export const RentalTerms: Terms = {
     checkInTime: "3:00 PM",
@@ -46,7 +53,20 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 895.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/1.jpg',
+        images: [
+            {
+                title: 'Cabin 1',
+                altText: 'Cabin 1',
+                pathToImage: './cabins/1.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 2,
@@ -59,7 +79,20 @@ export const CabinInfo: CabinDetails[] = [
             { count: 1, bedType: BedType.SleeperCouch }
         ], weeklyRate: 835.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/2.jpg',
+        images: [
+            {
+                title: 'Cabin 2',
+                altText: 'Cabin 2',
+                pathToImage: './cabins/2.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 3,
@@ -71,7 +104,20 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 940.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/3.jpg',
+        images: [
+            {
+                title: 'Cabin 3',
+                altText: 'Cabin 3',
+                pathToImage: './cabins/3.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 4,
@@ -83,7 +129,20 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 990.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen, Amenity.Shower],
-        imagePath: './cabins/4.jpg',
+        images: [
+            {
+                title: 'Cabin 4',
+                altText: 'Cabin 4',
+                pathToImage: './cabins/4.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 5,
@@ -95,7 +154,20 @@ export const CabinInfo: CabinDetails[] = [
         ],
         weeklyRate: 565.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen],
-        imagePath: './cabins/5.jpg',
+        images: [
+            {
+                title: 'Cabin 5',
+                altText: 'Cabin 5',
+                pathToImage: './cabins/5.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     },
     {
         number: 6,
@@ -105,7 +177,20 @@ export const CabinInfo: CabinDetails[] = [
         beds: [{ count: 2, bedType: BedType.Double }, { count: 1, bedType: BedType.SleeperCouch }],
         weeklyRate: 700.0,
         amenities: [Amenity.Wifi, Amenity.Kitchen],
-        imagePath: './cabins/6.jpg',
+        images: [
+            {
+                title: 'Cabin 6',
+                altText: 'Cabin 6',
+                pathToImage: './cabins/6.jpg'
+            },
+            {
+                title: 'Store Front',
+                altText: 'Sebago store front',
+                pathToImage: './store-front.webp'
+            },
+        ],
+        insidePanoramaSource: "https://webhost.rjmac.dev/pannellum/?config=https://static.rjmac.dev/panoramas/test/amphitheater/config.json",
+        insidePanoramaHost: "https://webhost.rjmac.dev/pannellum"
     }
 ]
 
@@ -149,51 +234,33 @@ export const AmenitiesList: string[] = [
     'Games and books for check out',
     'Canoe and paddle boat usage'
 ];
+import GalleryImagesData from './GalleryImages.json';
 
-export const GalleryImages: ImageInfo[] = [
-    {
-        title: 'Store Front',
-        altText: 'Sebago store front',
-        pathToImage: './store-front.webp'
+export const WebsiteImagesConfig: WebsiteImages = {
+    Welcome: {
+        pathToImage: './store-front.webp',
+        altText: 'Outside of the Candy Store.',
+        title: 'Store Front'
     },
-    {
-        title: 'Store Front 2',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/1.jpg'
+    Amenities: {
+        pathToImage: './dock.webp',
+        altText: 'Dock',
+        title: 'Dock'
     },
-    {
-        title: 'Store Front 3',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/5.jpg'
+    ReasonsToStay: {
+        pathToImage: './frog.webp',
+        altText: 'frog',
+        title: 'frog'
     },
-    {
-        title: 'Store Front 4',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/3.jpg'
+    ThingsToNote: {
+        pathToImage: './canoe.webp',
+        altText: 'canoe',
+        title: 'canoe'
     },
-    {
-        title: 'Store Front 5',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/2.jpg'
+    ContactUs: {
+        pathToImage: './welcome.webp',
+        altText: 'welcome',
+        title: 'welcome'
     },
-    {
-        title: 'Store Front',
-        altText: 'Sebago store front',
-        pathToImage: './store-front.webp'
-    },
-    {
-        title: 'Store Front 2',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/1.jpg'
-    },
-    {
-        title: 'Store Front 3',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/5.jpg'
-    },
-    {
-        title: 'Store Front 4',
-        altText: 'Sebago store front',
-        pathToImage: './cabins/3.jpg'
-    },
-]
+    GalleryImages: GalleryImagesData
+};

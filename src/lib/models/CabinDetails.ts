@@ -1,4 +1,4 @@
-import type { Terms } from "./Terms";
+import type { ImageInfo } from "./ImageInfo";
 
 export interface CabinDetails {
     number: number;
@@ -8,7 +8,9 @@ export interface CabinDetails {
     weeklyRate: number;
     description: string;
     amenities: Amenity[];
-    imagePath: string;
+    images: ImageInfo[];
+    insidePanoramaSource: string;
+    insidePanoramaHost: string;
 }
 
 interface BedDescriptor {
@@ -17,8 +19,8 @@ interface BedDescriptor {
 }
 
 export enum BedType {
-    Double = "Double",
-    Twin = "Twin",
+    Double = "Double Bed",
+    Twin = "Twin Bed",
     SleeperCouch = "Sleeper Couch"
 }
 

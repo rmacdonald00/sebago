@@ -11,20 +11,32 @@
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
-
-</html>
-
 <style>
 	:root {
 		--tan: #d6d3bd;
+		--dark-tan: #9a9784;
 		--white: #ffffff;
 		--sebago-red: #8B0000;
+		font-family: 'Text-Font';
 	}
 
 	body {
+		font-size: 1.3rem;
 		background-color: var(--tan);
 		margin: 0px;
-		min-width: 100vw;
-		min-height: 100vh;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	@font-face {
+		font-family: 'Prominent-Font';
+		src: local('Arial Black'), local('Impact');
+	}
+
+	@font-face {
+		font-family: 'Text-Font';
+		src: local('Gill Sans');
 	}
 </style>
+
+</html>

@@ -3,7 +3,7 @@
 	export let items: string[];
 </script>
 
-<h1>{title}</h1>
+<h2>{title}</h2>
 <ul>
 	{#each items as item}
 		<li>{item}</li>
