@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { SebagoDetails } from '$lib/data/WebsiteContent';
+	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
+	export let SebagoDetails: SebagoInfo;
 	import AddressDisplay from './AddressDisplay.svelte';
 </script>
 
 <div class={'footer'}>
 	<div class={'sebago-info'}>
 		<span class="material-symbols-outlined"> copyright </span>
-		2024 by Sebago Resort. &nbsp;&nbsp;
+		2024 by {SebagoDetails.name}. &nbsp;&nbsp;
 		<AddressDisplay address={SebagoDetails.address} />
 	</div>
 	<div>

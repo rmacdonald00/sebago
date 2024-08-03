@@ -3,6 +3,9 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import '../styles/display.css';
 	import '../styles/text.css';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -17,7 +20,7 @@
 	<div class={'slot-content'}>
 		<slot />
 	</div>
-	<PageFooter />
+	<PageFooter SebagoDetails={data.SebagoDetails} />
 </div>
 
 <style>

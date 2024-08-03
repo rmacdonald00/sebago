@@ -1,20 +1,21 @@
 <script lang="ts">
 	import CabinDisplay from '$lib/components/CabinDisplay.svelte';
-	import { CabinInfo, RentalTerms, SebagoDetails } from '$lib/data/WebsiteContent';
+	import type { PageData } from './$types';
+	export let data: PageData;
 
-	const cabinDescriptions = CabinInfo.sort((a, b) => {
+	const cabinDescriptions = data.CabinInfo.sort((a, b) => {
 		return a.number - b.number;
 	});
 </script>
 
 <h1>Cabins & Rates</h1>
 
-<span>{RentalTerms.bookingTermsDescription} </span>
-<p>Check-In Time: {RentalTerms.checkInTime}</p>
-<p>Check-Out Time: {RentalTerms.checkOutTime}</p>
+<span>{data.RentalTerms.bookingTermsDescription} </span>
+<p>Check-In Time: {data.RentalTerms.checkInTime}</p>
+<p>Check-Out Time: {data.RentalTerms.checkOutTime}</p>
 <ol>
 	{#each cabinDescriptions as cabin}
-		<CabinDisplay {cabin} />
+		<CabinDisplay {cabin} SebagoDetails={data.SebagoDetails} />
 	{/each}
 </ol>
 
