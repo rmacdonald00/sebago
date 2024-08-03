@@ -58,6 +58,11 @@
 </ImageAndContentRow>
 
 <style>
+	button {
+		background-color: var(--dark-tan);
+		color: black;
+		height: 3rem;
+	}
 	.contact-form {
 		row-gap: 0.5rem;
 	}

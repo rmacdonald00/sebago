@@ -63,13 +63,13 @@
 	.close-button .material-symbols-outlined {
 		font-size: 2rem;
 	}
-	@media only screen and (max-width: 30rem) {
+	@media only screen and (max-width: 35rem) {
 		.horizontal-nav,
 		.horizontal-nav a {
 			display: none;
 		}
 	}
-	@media only screen and (min-width: 30rem) {
+	@media only screen and (min-width: 35rem) {
 		.vertical-nav {
 			display: none;
 		}
