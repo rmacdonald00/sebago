@@ -19,6 +19,7 @@ class MongoDatabase {
     }
 
     public async openConnection() {
+        console.log("Opening Mongo Connection...", new Date());
         this.mongoClient = await MongoClient.connect(MONGO_CONNECTION_STRING);
     }
 
