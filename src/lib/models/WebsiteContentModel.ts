@@ -9,6 +9,7 @@ export interface WebsiteContent extends Document {
     RentalTerms: Terms;
     CabinDetails: CabinDetails[];
     HomePageRows: HomePageRow[];
+    WelcomeParagraph: string;
 }
 
 export interface SebagoInfo {

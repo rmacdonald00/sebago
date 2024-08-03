@@ -242,21 +242,24 @@ export const WebsiteImagesConfig: WebsiteImages = {
         altText: 'Outside of the Candy Store.',
         title: 'Store Front'
     },
-    Amenities: {
-        pathToImage: './dock.webp',
-        altText: 'Dock',
-        title: 'Dock'
-    },
-    ReasonsToStay: {
-        pathToImage: './frog.webp',
-        altText: 'frog',
-        title: 'frog'
-    },
-    ThingsToNote: {
-        pathToImage: './canoe.webp',
-        altText: 'canoe',
-        title: 'canoe'
-    },
+    HomePageRow: [
+        {
+            pathToImage: './dock.webp',
+            altText: 'Dock',
+            title: 'Dock'
+        },
+        {
+            pathToImage: './frog.webp',
+            altText: 'frog',
+            title: 'frog'
+        },
+        {
+            pathToImage: './canoe.webp',
+            altText: 'canoe',
+            title: 'canoe'
+        },
+    ],
+
     ContactUs: {
         pathToImage: './welcome.webp',
         altText: 'welcome',
