@@ -1,6 +1,6 @@
 import WebsiteContentCollection from '$lib/server/database/WebsiteContentCollection';
-import { error, type ServerLoadEvent } from '@sveltejs/kit';
-export async function load(loadEvent: ServerLoadEvent) {
+import { error } from '@sveltejs/kit';
+export async function load() {
     const websiteContentCollection = new WebsiteContentCollection();
     console.log("Loading Website Content...", new Date());
     const loadedContent = await websiteContentCollection.getLatestEntry();
@@ -8,7 +8,6 @@ export async function load(loadEvent: ServerLoadEvent) {
         console.error("No website content found.");
         error(500);
     }
-    console.log(loadedContent);
     return {
         SebagoDetails: loadedContent.SebagoContactDetails,
         AboutSebagoSections: loadedContent.AboutSections,

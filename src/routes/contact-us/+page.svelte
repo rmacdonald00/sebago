@@ -1,8 +1,9 @@
 <script lang="ts">
 	import ImageAndContentRow from '$lib/components/ImageAndContentRow.svelte';
-	import { SebagoDetails, WebsiteImagesConfig } from '$lib/data/WebsiteContent';
+	import { WebsiteImagesConfig } from '$lib/data/WebsiteImages';
 	import type { ContactFormRequest } from '$lib/models/ContactFormRequest';
-
+	import type { PageData } from './$types';
+	export let data: PageData;
 	const contactFormRequest: ContactFormRequest = {
 		name: '',
 		email: '',
@@ -53,7 +54,8 @@
 	</form>
 
 	<div>
-		You can also call or email us directly at {SebagoDetails.phoneNumber} or {SebagoDetails.email}
+		You can also call or email us directly at {data.SebagoDetails.phoneNumber} or {data
+			.SebagoDetails.email}
 	</div>
 </ImageAndContentRow>
 

@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { BedType, type CabinDetails } from '$lib/models/CabinDetails';
+	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
 	import CallToBook from './CallToBook.svelte';
 	import ImageArrayDisplay from './ImageArrayDisplay.svelte';
 
 	export let cabin: CabinDetails;
+	export let SebagoDetails: SebagoInfo;
+
 	let showPanorama = false;
 	let panoramaHasShown = false;
 
@@ -65,7 +68,7 @@
 	<div class={'booking-info'}>
 		<p>Weekly Rate: ${cabin.weeklyRate.toFixed(2)}</p>
 		<p>Daily Rate: ${cabin.dailyBaseRate.toFixed(2)}</p>
-		<CallToBook />
+		<CallToBook {SebagoDetails} />
 	</div>
 </div>
 

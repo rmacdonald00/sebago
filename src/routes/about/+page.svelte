@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { AboutSebagoSections } from '$lib/data/WebsiteContent';
+	import type { PageData } from './$types';
+	export let data: PageData;
 </script>
 
 <h1>About Us</h1>
-{#each AboutSebagoSections as sectionText}
+{#each data.AboutSebagoSections as sectionText}
 	<p class={'section'}>{sectionText}</p>
 {/each}
 

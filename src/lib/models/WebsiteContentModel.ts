@@ -13,6 +13,7 @@ export interface WebsiteContent extends Document {
 }
 
 export interface SebagoInfo {
+    name: string;
     phoneNumber: string;
     address: Address;
     email: string;
