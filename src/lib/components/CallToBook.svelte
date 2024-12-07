@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { SebagoDetails } from '$lib/data/WebsiteContent';
+	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
+
+	export let SebagoDetails: SebagoInfo;
 </script>
 
 <div class={'container'}>
