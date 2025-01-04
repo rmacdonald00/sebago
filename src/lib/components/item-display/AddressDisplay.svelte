@@ -4,4 +4,5 @@
 	export let address: Address;
 </script>
 
+<!-- TODO: if big screen, include address map -->
 <span>{address.street} {address.city}, {address.state} {address.zip}</span>
