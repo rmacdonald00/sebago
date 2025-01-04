@@ -1,9 +1,13 @@
 <script lang="ts">
+	import { getContext } from 'svelte';
+
 	let isExpanded = false;
+
+	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context
 
 	const toggleVerticalNav = () => {
 		isExpanded = !isExpanded;
-		document.documentElement.style.overflow = isExpanded ? 'hidden' : 'scroll';
+		SetCanScrollMainContent(!isExpanded);
 	};
 
 	const navigationRoutes: { href: string; title: string }[] = [

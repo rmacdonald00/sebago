@@ -2,11 +2,26 @@
 	import SebagoInfoDisplay from '$lib/components/item-display/SebagoInfoDisplay.svelte';
 	import Copyright from '$lib/components/structure/Copyright.svelte';
 	import PageHeader from '$lib/components/structure/PageHeader.svelte';
+	import { setContext } from 'svelte';
 	import '../styles/display.css';
 	import '../styles/text.css';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
+
+	const setCanScrollMainContent = (value: boolean) => {
+		// Maybe this can be cleaned up somehow
+		const contentElement = document.getElementById('scrollable-content');
+		if (contentElement) {
+			contentElement.style.overflowY = value ? 'auto' : 'hidden';
+		}
+		const stackElement = document.getElementById('vertical-content-list');
+		if (stackElement) {
+			stackElement.style.overflowY = value ? 'auto' : 'hidden';
+		}
+	};
+
+	setContext('SetCanScrollMainContent', setCanScrollMainContent);
 </script>
 
 <svelte:head>
@@ -15,10 +30,10 @@
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
 	/>
 </svelte:head>
-<div class="container">
+<div class="container" id="vertical-content-list">
 	<div class={'vertical-stack'}>
 		<span class={'header'}><PageHeader /></span>
-		<div class="content">
+		<div class="content" id="scrollable-content">
 			<div class={'slot-content'}>
 				<slot />
 			</div>
@@ -48,6 +63,10 @@
 	.header {
 		position: sticky;
 		top: 0;
+		z-index: 5;
+	}
+	.container {
+		height: 100vh; /* Full viewport height */
 	}
 
 	/* Big Screen */
@@ -58,7 +77,6 @@
 
 		.container {
 			display: flex;
-			height: 100vh; /* Full viewport height */
 			overflow: hidden; /* Prevent scrolling of the container */
 		}
 

@@ -1,21 +1,23 @@
 <script lang="ts">
 	import type { ImageInfo } from '$lib/models/ImageInfo';
+	import { getContext } from 'svelte';
 	import ImageArrayDisplay from './ImageArrayDisplay.svelte';
 	import ImageDisplay from './ImageDisplay.svelte';
 
 	export let images: ImageInfo[];
 	let lightboxOpen: boolean = false;
 	let zoomedImageIndex: number = 0;
+	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context
 
 	const openLightBox = (index: number) => {
 		zoomedImageIndex = index;
-		document.documentElement.style.overflow = 'hidden';
+		SetCanScrollMainContent(false);
 		lightboxOpen = true;
 	};
 
 	const closeLightbox = () => {
-		document.documentElement.style.overflow = 'scroll';
 		lightboxOpen = false;
+		SetCanScrollMainContent(true);
 	};
 
 	const closeIfEscPressed = (keyEvent: KeyboardEvent) => {
