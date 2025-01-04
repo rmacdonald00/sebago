@@ -35,12 +35,14 @@
 {#if lightboxOpen}
 	<div class={'lightbox'}>
 		<button class={'close-button'} on:click={closeLightbox}>Close</button>
-		<ImageArrayDisplay
-			{images}
-			focusedImageIndex={zoomedImageIndex}
-			size={'full-screen'}
-			theme="light"
-		/>
+		<span class="image-div">
+			<ImageArrayDisplay
+				{images}
+				focusedImageIndex={zoomedImageIndex}
+				size={'full-screen'}
+				theme="light"
+			/>
+		</span>
 	</div>{/if}
 
 <style>
@@ -50,11 +52,11 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 100%;
-		width: 100%;
+		height: 100vh;
+		width: 100vw;
 		z-index: 10;
-		display: grid;
-		grid-template-rows: max(2rem, 5%) auto;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.close-button {
@@ -63,6 +65,13 @@
 		padding: 0;
 		color: var(--white);
 		font-family: 'Text-Font';
+		width: 100%;
+		height: max(2rem, 5%);
+		flex: 0;
+	}
+	.image-div {
+		flex: 2;
+		max-height: 90vh;
 	}
 
 	.close-button:hover {

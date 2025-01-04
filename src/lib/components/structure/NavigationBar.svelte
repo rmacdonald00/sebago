@@ -85,7 +85,7 @@
 		top: 0;
 		right: 0;
 		height: 100vh;
-		width: 100vh;
+		width: 100vw;
 	}
 	.expanded-nav-box {
 		background-color: var(--sebago-red);
