@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ImageGallery from '$lib/components/ImageGallery.svelte';
+	import ImageGallery from '$lib/components/image-display/ImageGallery.svelte';
 	import { WebsiteImagesConfig } from '$lib/data/WebsiteImages';
 </script>
 

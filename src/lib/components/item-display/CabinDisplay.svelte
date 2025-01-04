@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { BedType, type CabinDetails } from '$lib/models/CabinDetails';
 	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
+	import ImageArrayDisplay from '../image-display/ImageArrayDisplay.svelte';
 	import CallToBook from './CallToBook.svelte';
-	import ImageArrayDisplay from './ImageArrayDisplay.svelte';
 
 	export let cabin: CabinDetails;
 	export let SebagoDetails: SebagoInfo;

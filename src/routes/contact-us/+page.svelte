@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ImageAndContentRow from '$lib/components/ImageAndContentRow.svelte';
+	import ImageAndContentRow from '$lib/components/helpers/ImageAndContentRow.svelte';
 	import { WebsiteImagesConfig } from '$lib/data/WebsiteImages';
 	import type { ContactFormRequest } from '$lib/models/ContactFormRequest';
 	import type { PageData } from './$types';

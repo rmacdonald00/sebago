@@ -1,5 +1,5 @@
 <script lang="ts">
-	import CabinDisplay from '$lib/components/CabinDisplay.svelte';
+	import CabinDisplay from '$lib/components/item-display/CabinDisplay.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 

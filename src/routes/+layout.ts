@@ -1,11 +1,13 @@
-import WebsiteContent from '$lib/data/content.json';
+import WebsiteData from '$lib/data/content.json';
+import type { WebsiteContent } from '$lib/models/WebsiteContentModel';
 export function load() {
+    const data: WebsiteContent = JSON.parse(JSON.stringify(WebsiteData));
     return {
-        SebagoDetails: WebsiteContent.SebagoContactDetails,
-        AboutSebagoSections: WebsiteContent.AboutSections,
-        RentalTerms: WebsiteContent.RentalTerms,
-        CabinInfo: WebsiteContent.CabinDetails,
-        HomePageRows: WebsiteContent.HomePageRows,
-        WelcomeParagraph: WebsiteContent.WelcomeParagraph
+        SebagoDetails: data.SebagoContactDetails,
+        AboutSebagoSections: data.AboutSections,
+        RentalTerms: data.RentalTerms,
+        CabinInfo: data.CabinDetails,
+        HomePageRows: data.HomePageRows,
+        WelcomeParagraph: data.WelcomeParagraph
     };
 }

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
 	export let SebagoDetails: SebagoInfo;
-	import AddressDisplay from './AddressDisplay.svelte';
+	import AddressDisplay from '../item-display/AddressDisplay.svelte';
 </script>
 
 <div class={'footer'}>
