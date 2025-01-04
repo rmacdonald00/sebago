@@ -1,7 +1,6 @@
 <script lang="ts">
 	import SebagoInfoDisplay from '$lib/components/item-display/SebagoInfoDisplay.svelte';
 	import Copyright from '$lib/components/structure/Copyright.svelte';
-	import PageFooter from '$lib/components/structure/Copyright.svelte';
 	import PageHeader from '$lib/components/structure/PageHeader.svelte';
 	import '../styles/display.css';
 	import '../styles/text.css';
@@ -17,14 +16,16 @@
 	/>
 </svelte:head>
 <div class="container">
-	<div class={'vertical-stack content'}>
-		<PageHeader />
-		<div class={'slot-content'}>
-			<slot />
+	<div class={'vertical-stack'}>
+		<span class={'header'}><PageHeader /></span>
+		<div class="content">
+			<div class={'slot-content'}>
+				<slot />
+			</div>
+			<span class="copyright">
+				<Copyright SebagoDetails={data.SebagoDetails} />
+			</span>
 		</div>
-		<span class="copyright">
-			<Copyright SebagoDetails={data.SebagoDetails} />
-		</span>
 	</div>
 	<div class="sidebar">
 		<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
@@ -37,17 +38,6 @@
 		flex: 2;
 		box-sizing: border-box;
 	}
-	.container {
-		display: flex;
-		height: 100vh; /* Full viewport height */
-		overflow: hidden; /* Prevent scrolling of the container */
-	}
-
-	.sidebar {
-		width: 250px; /* Fixed width for the sidebar */
-		flex-shrink: 0; /* Prevent shrinking */
-		overflow: hidden; /* Prevent scrolling inside */
-	}
 
 	.content {
 		flex: 1; /* Take the remaining space */
@@ -55,10 +45,27 @@
 		background-color: var(--tan);
 	}
 
+	.header {
+		position: sticky;
+		top: 0;
+	}
+
 	/* Big Screen */
 	@media only screen and (min-width: 35rem) {
 		.copyright {
 			display: none;
+		}
+
+		.container {
+			display: flex;
+			height: 100vh; /* Full viewport height */
+			overflow: hidden; /* Prevent scrolling of the container */
+		}
+
+		.sidebar {
+			width: 250px; /* Fixed width for the sidebar */
+			flex-shrink: 0; /* Prevent shrinking */
+			overflow: hidden; /* Prevent scrolling inside */
 		}
 	}
 

@@ -4,4 +4,4 @@
 	export let address: Address;
 </script>
 
-<p>{address.street} {address.city}, {address.state} {address.zip}</p>
+<span>{address.street} {address.city}, {address.state} {address.zip}</span>
