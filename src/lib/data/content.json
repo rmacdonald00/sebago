@@ -1,7 +1,7 @@
 {
     "ModelVersionKey": 1,
     "SebagoContactDetails": {
-        "name": "Sebago Cabin Rentals",
+        "name": "Sebago Resort",
         "phoneNumber": "913-961-7497",
         "email": "sebagoresort@yahoo.com",
         "address": {
@@ -18,6 +18,10 @@
         "instagram": {
             "username": "sebagoresort",
             "externalLink": "https://www.instagram.com/sebagoresort/"
+        },
+        "emailContentDefaults": {
+            "subject": "Sebago Resort Website Contact",
+            "body": "Here is some mo0re we!!rd <content>\n\nand some line breaks"
         }
     },
     "AboutSections": [

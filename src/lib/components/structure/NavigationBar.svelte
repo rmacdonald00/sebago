@@ -10,8 +10,7 @@
 		{ href: '/', title: 'Home' },
 		{ href: '/about', title: 'About' },
 		{ href: '/cabins-and-rates', title: 'Cabins & Rates' },
-		{ href: '/gallery', title: 'Gallery' },
-		{ href: '/contact-us', title: 'Contact Us' }
+		{ href: '/gallery', title: 'Gallery' }
 	];
 </script>
 

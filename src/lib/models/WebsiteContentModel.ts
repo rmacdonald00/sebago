@@ -19,6 +19,7 @@ export interface SebagoInfo {
     email: string;
     facebook: SocialMedia;
     instagram: SocialMedia;
+    emailContentDefaults?: { subject?: string; body?: string };
 }
 
 export interface Address {

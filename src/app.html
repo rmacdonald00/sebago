@@ -17,12 +17,26 @@
 		--dark-tan: #9a9784;
 		--white: #ffffff;
 		--sebago-red: #8B0000;
+		/* TBD Variables
+			mobile-width-breakpoint: 35rem
+		*/
 		font-family: 'Text-Font';
+		scrollbar-color: #7d7d7d #00000000;
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+		position: fixed;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 0.5rem;
+		background: #7d7d7d;
 	}
 
 	body {
 		font-size: 1.3rem;
-		background-color: var(--tan);
+		background-color: var(--sebago-red);
 		margin: 0px;
 		min-width: 100%;
 		min-height: 100%;
