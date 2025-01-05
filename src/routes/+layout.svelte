@@ -17,7 +17,7 @@
 			mobileScrollableContent.style.overflowY = value ? 'auto' : 'hidden';
 		}
 
-		const desktopScrollableContent = document.getElementById('scrollable-content');
+		const desktopScrollableContent = document.getElementById('scrollable-slot-content');
 		if (desktopScrollableContent) {
 			desktopScrollableContent.style.overflowY = value ? 'auto' : 'hidden';
 		}
@@ -65,7 +65,7 @@
 				<span class="header-title">SEBAGO</span>
 				<NavigationList orientation={'horizontal'} />
 			</div>
-			<div class={'slot-content'} id="scrollable-content">
+			<div class={'slot-content'} id="scrollable-slot-content">
 				<slot />
 			</div>
 		</div>
