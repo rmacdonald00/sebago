@@ -4,6 +4,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	ssr: {
-		noExternal: ['leaflet']
+		noExternal: ['leaflet'],
+		optimizeDeps: {
+			include: ['leaflet']
+		}
 	}
 });
