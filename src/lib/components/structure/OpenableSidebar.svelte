@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import SebagoInfoDisplay from '../item-display/SebagoInfoDisplay.svelte';
-	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
-
 	let isExpanded = false;
-	export let SebagoDetails: SebagoInfo;
 
 	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context
 
@@ -12,20 +8,10 @@
 		isExpanded = !isExpanded;
 		SetCanScrollMainContent(!isExpanded);
 	};
-
-	// const navigationRoutes: { href: string; title: string }[] = [
-	// 	{ href: '/', title: 'Home' },
-	// 	{ href: '/about', title: 'About' },
-	// 	{ href: '/cabins-and-rates', title: 'Cabins & Rates' },
-	// 	{ href: '/gallery', title: 'Gallery' }
-	// ];
 </script>
 
 <div class={'horizontal-nav'}>
-	<!-- {#each navigationRoutes as route}
-		<a href={route.href}>{route.title}</a>
-	{/each} -->
-	<SebagoInfoDisplay {SebagoDetails} />
+	<slot />
 </div>
 
 <div class={'vertical-nav'}>
@@ -40,10 +26,7 @@
 			<button on:click={toggleVerticalNav} class="close-button">
 				<span class="material-symbols-outlined"> close </span></button
 			>
-			<!-- {#each navigationRoutes as route}
-				<a href={route.href} on:click={toggleVerticalNav}>{route.title}</a>
-			{/each} -->
-			<SebagoInfoDisplay {SebagoDetails} />
+			<slot />
 		</div>
 	{/if}
 </div>
@@ -72,8 +55,7 @@
 		font-size: 2rem;
 	}
 	@media only screen and (max-width: 35rem) {
-		.horizontal-nav,
-		.horizontal-nav a {
+		.horizontal-nav {
 			display: none;
 		}
 	}
@@ -107,23 +89,7 @@
 		flex-direction: column;
 	}
 
-	.expanded-nav-box a {
-		color: var(--white);
-		height: 3rem;
-		align-items: center;
-		padding-right: 1rem;
-	}
 	.horizontal-nav {
-		/* display: flex;
-		flex-direction: row;
-		white-space: nowrap;
-		flex: 2;
-		justify-content: center;
-		font-size: larger;
-		column-gap: 2vw; */
 		height: 100%;
-	}
-	a {
-		color: black;
 	}
 </style>

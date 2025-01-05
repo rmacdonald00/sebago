@@ -1,12 +1,11 @@
 <script lang="ts">
 	import SebagoInfoDisplay from '$lib/components/item-display/SebagoInfoDisplay.svelte';
 	import Copyright from '$lib/components/structure/Copyright.svelte';
-	import PageHeader from '$lib/components/structure/PageHeader.svelte';
 	import { setContext } from 'svelte';
 	import '../styles/display.css';
 	import '../styles/text.css';
 	import type { PageData } from './$types';
-	import NavigationBar from '$lib/components/structure/NavigationBar.svelte';
+	import OpenableSidebar from '$lib/components/structure/OpenableSidebar.svelte';
 	import NavigationList from '$lib/components/structure/NavigationList.svelte';
 
 	export let data: PageData;
@@ -50,8 +49,13 @@
 		</div>
 	</div>
 	<div class="sidebar">
-		<NavigationBar SebagoDetails={data.SebagoDetails} />
-		<!-- <SebagoInfoDisplay SebagoDetails={data.SebagoDetails} /> -->
+		<OpenableSidebar>
+			<span class={'nav-list'}> <NavigationList orientation={'horizontal'} /></span>
+			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
+			<span class="copyright">
+				<Copyright SebagoDetails={data.SebagoDetails} />
+			</span>
+		</OpenableSidebar>
 	</div>
 </div>
 
@@ -110,11 +114,16 @@
 			flex-shrink: 0; /* Prevent shrinking */
 			overflow: hidden; /* Prevent scrolling inside */
 		}
+
+		.sidebar .nav-list,
+		.sidebar .copyright {
+			display: none;
+		}
 	}
 
 	/* Small Screen */
 	@media only screen and (max-width: 35rem) {
-		.nav-list {
+		.page-header > .nav-list {
 			display: none;
 		}
 

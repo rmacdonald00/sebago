@@ -3,7 +3,6 @@
 	export let SebagoDetails: SebagoInfo;
 	import AddressDisplay from '../item-display/AddressDisplay.svelte';
 	import Copyright from '../structure/Copyright.svelte';
-	import NavigationList from '../structure/NavigationList.svelte';
 
 	const mailtoLink = encodeURI(
 		`mailto:${SebagoDetails.email}?subject=${SebagoDetails.emailContentDefaults?.subject ?? ''}&body=${SebagoDetails.emailContentDefaults?.body ?? ''}`
@@ -11,7 +10,6 @@
 </script>
 
 <div class="content-box">
-	<span class={'nav-list'}><NavigationList orientation={'vertical'} /></span>
 	<div class="details">
 		<h1>Contact Us</h1>
 		<div>
@@ -30,9 +28,6 @@
 				<span>{SebagoDetails.facebook.username}</span>
 			</a>
 		</div>
-		<span class="copyright">
-			<Copyright {SebagoDetails} />
-		</span>
 	</div>
 </div>
 
@@ -57,19 +52,5 @@
 		color: black;
 		display: block;
 		font-size: large;
-	}
-
-	/* Small Screen */
-	@media only screen and (max-width: 35rem) {
-		.copyright {
-			display: none;
-		}
-	}
-
-	/* Big Screen */
-	@media only screen and (min-width: 35rem) {
-		.nav-list {
-			display: none;
-		}
 	}
 </style>
