@@ -53,7 +53,8 @@
 	.mailto-button {
 		background-color: var(--dark-tan);
 		color: black;
-		display: inline-block;
+		display: block;
+		font-size: large;
 	}
 
 	/* Small Screen */

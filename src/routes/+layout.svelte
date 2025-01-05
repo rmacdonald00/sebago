@@ -32,7 +32,7 @@
 </svelte:head>
 <div class="container" id="vertical-content-list">
 	<div class={'vertical-stack'}>
-		<span class={'header'}><PageHeader /></span>
+		<span class={'header'}><PageHeader SebagoDetails={data.SebagoDetails} /></span>
 		<div class="content" id="scrollable-content">
 			<div class={'slot-content'}>
 				<slot />

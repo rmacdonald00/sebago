@@ -1,7 +1,10 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import SebagoInfoDisplay from '../item-display/SebagoInfoDisplay.svelte';
+	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
 
 	let isExpanded = false;
+	export let SebagoDetails: SebagoInfo;
 
 	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context
 
@@ -39,6 +42,7 @@
 			{#each navigationRoutes as route}
 				<a href={route.href} on:click={toggleVerticalNav}>{route.title}</a>
 			{/each}
+			<SebagoInfoDisplay {SebagoDetails} />
 		</div>
 	{/if}
 </div>

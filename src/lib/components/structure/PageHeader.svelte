@@ -1,10 +1,12 @@
 <script lang="ts">
+	import type { SebagoInfo } from '$lib/models/WebsiteContentModel';
 	import NavigationBar from './NavigationBar.svelte';
+	export let SebagoDetails: SebagoInfo;
 </script>
 
 <div class={'header'}>
 	<span class="header-title">SEBAGO</span>
-	<NavigationBar />
+	<NavigationBar {SebagoDetails} />
 </div>
 
 <style>
