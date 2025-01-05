@@ -1,53 +1,51 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	%sveltekit.head%
-</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+	<style>
+		:root {
+			--tan: #d6d3bd;
+			--dark-tan: #9a9784;
+			--white: #ffffff;
+			--sebago-red: #8b0000;
+			font-family: 'Text-Font';
+			scrollbar-color: #7d7d7d #00000000;
+		}
 
-<body data-sveltekit-preload-data="hover">
-	<div style="display: contents">%sveltekit.body%</div>
-</body>
-<style>
-	:root {
-		--tan: #d6d3bd;
-		--dark-tan: #9a9784;
-		--white: #ffffff;
-		--sebago-red: #8B0000;
-		font-family: 'Text-Font';
-		scrollbar-color: #7d7d7d #00000000;
-	}
+		::-webkit-scrollbar {
+			width: 5px;
+			position: fixed;
+		}
 
-	::-webkit-scrollbar {
-		width: 5px;
-		position: fixed;
-	}
+		::-webkit-scrollbar-thumb {
+			border-radius: 0.5rem;
+			background: #7d7d7d;
+		}
 
-	::-webkit-scrollbar-thumb {
-		border-radius: 0.5rem;
-		background: #7d7d7d;
-	}
+		body {
+			font-size: 1.3rem;
+			background-color: var(--tan);
+			margin: 0px;
+			min-width: 100%;
+			min-height: 100%;
+		}
 
-	body {
-		font-size: 1.3rem;
-		background-color: var(--tan);
-		margin: 0px;
-		min-width: 100%;
-		min-height: 100%;
-	}
+		@font-face {
+			font-family: 'Prominent-Font';
+			src: local('Arial Black'), local('Impact');
+		}
 
-	@font-face {
-		font-family: 'Prominent-Font';
-		src: local('Arial Black'), local('Impact');
-	}
-
-	@font-face {
-		font-family: 'Text-Font';
-		src: local('Gill Sans');
-	}
-</style>
-
+		@font-face {
+			font-family: 'Text-Font';
+			src: local('Gill Sans');
+		}
+	</style>
 </html>
