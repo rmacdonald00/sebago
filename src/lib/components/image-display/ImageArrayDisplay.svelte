@@ -38,7 +38,6 @@
 </div>
 
 <style>
-	/* Info Bar for Full Screen vs Inline Sizes */
 	.info-bar.full-screen {
 		font-size: 2rem;
 	}
@@ -47,19 +46,13 @@
 		font-size: 1rem;
 	}
 
-	/* General Button Styles */
 	.navigation-button {
 		background-color: transparent;
 		border: none;
-		/* padding: 1rem; Ensuring buttons are large enough to click/touch */
+		padding: 0;
 		height: 100%;
 		width: 100%;
 		opacity: 55%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		/* font-size: 2rem; */
-		cursor: pointer;
 	}
 
 	.light .navigation *,
@@ -67,77 +60,57 @@
 		color: var(--white);
 	}
 
-	.dark .navigation *,
-	.dark .image-column * {
+	.dark .navigation * {
 		color: var(--dark-tan);
 	}
-
-	/* Material icons */
 	.material-symbols-outlined {
-		font-size: 3rem; /* Adjust size for better accessibility */
+		font-size: 5rem;
 	}
 
-	/* Info bar layout */
 	.info-bar {
 		display: flex;
-		justify-content: space-between;
 		width: 100%;
+		justify-content: space-around;
 		margin-bottom: 0.5rem;
-		/* padding: 1rem; */
-		background: rgba(0, 0, 0, 0.5); /* Slight dark background to make text stand out */
 	}
 
-	/* Navigation buttons on hover */
 	.navigation-button:hover {
 		opacity: 100%;
 	}
 
-	/* Disabled navigation buttons */
 	.navigation-button:disabled {
 		opacity: 0%;
 	}
 
-	/* Container holding the image */
 	.zoomed-display {
 		width: 100%;
 		position: relative;
 		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden; /* Prevents image from overflowing */
 	}
 
-	/* Navigation at the bottom */
 	.navigation {
 		position: absolute;
 		bottom: 0;
+		height: 100%;
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		width: 100%;
-		/* height: 5rem; */
 	}
 
-	/* Image styling to prevent overflow */
 	.zoomed-display .image {
-		max-width: 90%; /* Ensures image width stays within the container */
-		max-height: 90%; /* Ensures image height stays within the container */
-		object-fit: contain; /* Ensures the image is scaled to fit within the container without distortion */
-		object-position: center; /* Centers the image inside the container */
+		max-width: 100%;
+		max-height: 100%;
 		margin: 0.3rem;
-	} /* Image column and layout */
+		object-fit: contain;
+		flex: 1;
+	}
+
 	.image-column {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		height: 100%;
 		row-gap: 0.2rem;
-	}
-
-	/* Make sure the gallery doesn't break on small screens */
-	@media (max-width: 600px) {
-		.material-symbols-outlined {
-			font-size: 2.5rem; /* Reduce icon size for smaller screens */
-		}
 	}
 </style>
