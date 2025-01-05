@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
-	import { getContext, onDestroy } from 'svelte';
+	import { getContext } from 'svelte';
 	let isExpanded = false;
 
 	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context

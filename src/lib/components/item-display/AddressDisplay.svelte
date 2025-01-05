@@ -6,6 +6,8 @@
 	export let address: Address;
 	export let locationName: string;
 	let mapElement: HTMLElement;
+
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let map: any;
 
 	onMount(async () => {
