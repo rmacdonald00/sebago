@@ -116,33 +116,19 @@
 		align-items: center;
 		flex: 2;
 	}
-	@media only screen and (min-width: 60rem) {
-		.images {
-			width: 70vw;
-		}
-		.booking-info {
-			display: flex;
-			flex-direction: column;
-		}
-		.divider {
-			border-right: 0.3rem var(--dark-tan) dotted;
-		}
+
+	.images {
+		width: 100%;
+	}
+	.booking-info {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-around;
 	}
 
-	@media only screen and (max-width: 60rem) {
-		.images {
-			width: 100%;
-		}
-		.booking-info {
-			display: flex;
-			flex-direction: row;
-			width: 100%;
-			justify-content: space-around;
-		}
-
-		.divider {
-			width: 100%;
-			border-bottom: 0.3rem var(--dark-tan) dotted;
-		}
+	.divider {
+		width: 100%;
+		border-bottom: 0.3rem var(--dark-tan) dotted;
 	}
 </style>

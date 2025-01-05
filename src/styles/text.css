@@ -1,19 +1,19 @@
 .prominent-font {
-    font-family: 'Prominent-Font';
-
+	font-family: 'Prominent-Font';
 }
 
 h1,
-h2 {
-    font-family: 'Prominent-Font';
-    color: var(--sebago-red);
-    margin: 0;
+h2,
+h3 {
+	font-family: 'Prominent-Font';
+	color: var(--sebago-red);
+	margin: 0;
 }
 
 .left-align {
-    text-align: left;
+	text-align: left;
 }
 
 .right-align {
-    text-align: right;
+	text-align: right;
 }
