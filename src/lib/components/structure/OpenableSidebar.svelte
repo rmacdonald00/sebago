@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
+	import { onNavigate } from '$app/navigation';
+	import { getContext, onDestroy } from 'svelte';
 	let isExpanded = false;
 
 	const SetCanScrollMainContent: (value: boolean) => void = getContext('SetCanScrollMainContent'); // Get the function from context
@@ -8,6 +9,10 @@
 		isExpanded = !isExpanded;
 		SetCanScrollMainContent(!isExpanded);
 	};
+
+	onNavigate(() => {
+		isExpanded = false;
+	});
 </script>
 
 <div class={'container'}>
