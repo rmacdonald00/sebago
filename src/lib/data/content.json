@@ -9,7 +9,11 @@
             "city": "Nisswa",
             "state": "MN",
             "zip": "56468",
-            "directions": "From MN 371, turn East onto Nashway Road. The Sebago sign is approximately one mile down the road. Turn right, and start a great vacation."
+            "directions": "From MN 371, turn East onto Nashway Road. The Sebago sign is approximately one mile down the road. Turn right, and start a great vacation.",
+            "latitudeAndLongitude": [
+                46.46611590860468,
+                -94.27597100534071
+            ]
         },
         "facebook": {
             "username": "Sebago Resort",

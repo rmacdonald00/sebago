@@ -17,7 +17,7 @@
 			<a href={mailtoLink} class={'mailto-button'}>Email us at {SebagoDetails.email}</a>
 		</div>
 
-		<AddressDisplay address={SebagoDetails.address} />
+		<AddressDisplay address={SebagoDetails.address} locationName={SebagoDetails.name} />
 		<div>
 			<a href={SebagoDetails.instagram.externalLink} target="_blank">
 				<span class="material-symbols-outlined"> open_in_new </span>

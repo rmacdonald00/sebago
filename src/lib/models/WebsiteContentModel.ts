@@ -28,6 +28,7 @@ export interface Address {
     state: string;
     zip: string;
     directions: string;
+    latitudeAndLongitude: [number, number];
 }
 
 interface SocialMedia {

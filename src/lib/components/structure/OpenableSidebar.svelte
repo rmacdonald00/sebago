@@ -67,7 +67,7 @@
 		right: 0;
 		text-align: right;
 		font-size: larger;
-		width: 50%;
+		width: 80%;
 		height: 100%;
 		z-index: 10;
 		justify-items: end;
