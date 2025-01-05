@@ -12,7 +12,8 @@
 
 	onMount(async () => {
 		// Warning - do not import `leaflet` outside of an `onMount`. It will error, hence the map: any
-		const Leaflet = (await import('leaflet')).default;
+		const Leaflet = await import('leaflet');
+
 		map = Leaflet.map(mapElement).setView(address.latitudeAndLongitude, 13);
 
 		Leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
