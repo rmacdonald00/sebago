@@ -10,11 +10,7 @@
 	};
 </script>
 
-<div class={'horizontal-nav'}>
-	<slot />
-</div>
-
-<div class={'vertical-nav'}>
+<div class={'container'}>
 	<button on:click={toggleVerticalNav}>
 		<span class="material-symbols-outlined"> menu </span></button
 	>
@@ -22,7 +18,7 @@
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div class="background-overlay" on:click={toggleVerticalNav}></div>
-		<div class="expanded-nav-box">
+		<div class="expanded-box">
 			<button on:click={toggleVerticalNav} class="close-button">
 				<span class="material-symbols-outlined"> close </span></button
 			>
@@ -38,7 +34,7 @@
 		height: 100%;
 		border: none;
 	}
-	.vertical-nav > button .material-symbols-outlined {
+	.container > button .material-symbols-outlined {
 		font-size: 3rem;
 		padding: 0.3rem 0.1rem;
 	}
@@ -54,16 +50,6 @@
 	.close-button .material-symbols-outlined {
 		font-size: 2rem;
 	}
-	@media only screen and (max-width: 35rem) {
-		.horizontal-nav {
-			display: none;
-		}
-	}
-	@media only screen and (min-width: 35rem) {
-		.vertical-nav {
-			display: none;
-		}
-	}
 
 	.background-overlay {
 		background-color: rgba(0, 0, 0, 0.43);
@@ -74,7 +60,7 @@
 		height: 100vh;
 		width: 100vw;
 	}
-	.expanded-nav-box {
+	.expanded-box {
 		background-color: var(--sebago-red);
 		color: var(--white);
 		position: fixed;
@@ -87,9 +73,5 @@
 		z-index: 10;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.horizontal-nav {
-		height: 100%;
 	}
 </style>

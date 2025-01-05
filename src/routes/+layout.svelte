@@ -49,13 +49,18 @@
 		</div>
 	</div>
 	<div class="sidebar">
-		<OpenableSidebar>
-			<span class={'nav-list'}> <NavigationList orientation={'horizontal'} /></span>
+		<span class={'openable-sidebar'}>
+			<OpenableSidebar>
+				<span class={'nav-list'}> <NavigationList orientation={'vertical'} /></span>
+				<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
+				<span class="copyright">
+					<Copyright SebagoDetails={data.SebagoDetails} />
+				</span>
+			</OpenableSidebar>
+		</span>
+		<span class={'static-sidebar'}>
 			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
-			<span class="copyright">
-				<Copyright SebagoDetails={data.SebagoDetails} />
-			</span>
-		</OpenableSidebar>
+		</span>
 	</div>
 </div>
 
@@ -100,6 +105,10 @@
 
 	/* Big Screen */
 	@media only screen and (min-width: 35rem) {
+		.openable-sidebar {
+			display: none;
+		}
+
 		.copyright {
 			display: none;
 		}
@@ -132,6 +141,10 @@
 			top: 0;
 			right: 0;
 			z-index: 20;
+		}
+
+		.static-sidebar {
+			display: none;
 		}
 	}
 </style>
