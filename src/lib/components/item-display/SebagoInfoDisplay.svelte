@@ -8,7 +8,7 @@
 		`mailto:${SebagoDetails.email}?subject=${SebagoDetails.emailContentDefaults?.subject ?? ''}&body=${SebagoDetails.emailContentDefaults?.body ?? ''}`
 	);
 
-	const telLink = `tel:+1${SebagoDetails.phoneNumber.replaceAll('-', '')}`;
+	const telLink = `tel:+1${SebagoDetails.phoneNumber.replace(/[^0-9]/g, '')}`;
 </script>
 
 <div class="content-box">
