@@ -12,13 +12,14 @@
 
 	const setCanScrollMainContent = (value: boolean) => {
 		// Maybe this can be cleaned up somehow
-		const contentElement = document.getElementById('scrollable-content');
-		if (contentElement) {
-			contentElement.style.overflowY = value ? 'auto' : 'hidden';
+		const mobileScrollableContent = document.getElementById('vertical-content-list');
+		if (mobileScrollableContent) {
+			mobileScrollableContent.style.overflowY = value ? 'auto' : 'hidden';
 		}
-		const stackElement = document.getElementById('vertical-content-list');
-		if (stackElement) {
-			stackElement.style.overflowY = value ? 'auto' : 'hidden';
+
+		const desktopScrollableContent = document.getElementById('scrollable-content');
+		if (desktopScrollableContent) {
+			desktopScrollableContent.style.overflowY = value ? 'auto' : 'hidden';
 		}
 	};
 
@@ -31,36 +32,47 @@
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
 	/>
 </svelte:head>
-<div class="container" id="vertical-content-list">
-	<div class={'vertical-stack'}>
-		<span class={'header'}>
+
+<!-- Mobile Layout -->
+<div class="mobile-layout">
+	<div class="container" id="vertical-content-list">
+		<div class={'vertical-stack'}>
 			<div class={'page-header'}>
 				<span class="header-title">SEBAGO</span>
-				<span class={'nav-list'}> <NavigationList orientation={'horizontal'} /></span>
 			</div>
-		</span>
-		<div class="content" id="scrollable-content">
 			<div class={'slot-content'}>
 				<slot />
 			</div>
-			<span class="copyright">
-				<Copyright SebagoDetails={data.SebagoDetails} />
-			</span>
+			<Copyright SebagoDetails={data.SebagoDetails} />
 		</div>
 	</div>
 	<div class="sidebar">
-		<span class={'openable-sidebar'}>
-			<OpenableSidebar>
-				<span class={'nav-list'}> <NavigationList orientation={'vertical'} /></span>
-				<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
-				<span class="copyright">
-					<Copyright SebagoDetails={data.SebagoDetails} />
-				</span>
-			</OpenableSidebar>
-		</span>
-		<span class={'static-sidebar'}>
+		<OpenableSidebar>
+			<span class={'nav-list'}> <NavigationList orientation={'vertical'} /></span>
 			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
-		</span>
+			<span class="copyright">
+				<Copyright SebagoDetails={data.SebagoDetails} />
+			</span>
+		</OpenableSidebar>
+	</div>
+</div>
+
+<!-- Desktop Layout -->
+<div class="desktop-layout">
+	<div class="container">
+		<div class={'vertical-stack'}>
+			<div class={'page-header'}>
+				<span class="header-title">SEBAGO</span>
+				<NavigationList orientation={'horizontal'} />
+			</div>
+			<div class={'slot-content'} id="scrollable-content">
+				<slot />
+			</div>
+		</div>
+		<div class="sidebar">
+			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
+			<Copyright SebagoDetails={data.SebagoDetails} />
+		</div>
 	</div>
 </div>
 
@@ -76,40 +88,44 @@
 		background-color: var(--tan);
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 		border-bottom: 2px var(--sebago-red) solid;
 		width: 100%;
 		box-sizing: border-box;
+		position: sticky;
+		top: 0;
+		z-index: 5;
 	}
 	.slot-content {
 		padding: 1rem;
 		flex: 2;
 		box-sizing: border-box;
-	}
-
-	.content {
-		flex: 1; /* Take the remaining space */
 		overflow-y: auto; /* Scrollable content */
 		background-color: var(--tan);
-	}
-
-	.header {
-		position: sticky;
-		top: 0;
-		z-index: 5;
 	}
 	.container {
 		height: 100vh; /* Full viewport height */
 	}
 
-	/* Big Screen */
-	@media only screen and (min-width: 35rem) {
-		.openable-sidebar {
+	/* Small Screen */
+	@media only screen and (max-width: 35rem) {
+		.desktop-layout,
+		.desktop-layout * {
 			display: none;
 		}
+		.sidebar {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 20;
+		}
+	}
 
-		.copyright {
+	/* Big Screen */
+	@media only screen and (min-width: 35rem) {
+		.mobile-layout,
+		.mobile-layout * {
 			display: none;
 		}
 
@@ -119,32 +135,16 @@
 		}
 
 		.sidebar {
-			width: 250px; /* Fixed width for the sidebar */
+			width: max(250px, 30%); /* Fixed width for the sidebar */
 			flex-shrink: 0; /* Prevent shrinking */
 			overflow: hidden; /* Prevent scrolling inside */
-		}
-
-		.sidebar .nav-list,
-		.sidebar .copyright {
-			display: none;
-		}
-	}
-
-	/* Small Screen */
-	@media only screen and (max-width: 35rem) {
-		.page-header > .nav-list {
-			display: none;
-		}
-
-		.sidebar {
-			position: fixed;
-			top: 0;
-			right: 0;
-			z-index: 20;
-		}
-
-		.static-sidebar {
-			display: none;
+			height: 100%;
+			background-color: var(--sebago-red);
+			padding: 1rem;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
 		}
 	}
 </style>

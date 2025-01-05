@@ -33,14 +33,7 @@
 
 <style>
 	.content-box {
-		height: 100%;
 		width: 100%;
-		background-color: var(--sebago-red);
-		padding: 1rem;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
 	}
 
 	.details {
