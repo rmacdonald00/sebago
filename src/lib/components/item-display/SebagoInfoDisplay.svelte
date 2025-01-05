@@ -28,22 +28,12 @@
 				<span>{SebagoDetails.facebook.username}</span>
 			</a>
 		</div>
-		<span class="copyright">
-			<Copyright {SebagoDetails} />
-		</span>
 	</div>
 </div>
 
 <style>
 	.content-box {
-		height: 100%;
 		width: 100%;
-		background-color: var(--sebago-red);
-		padding: 1rem;
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
 	}
 
 	.details {
@@ -55,12 +45,5 @@
 		color: black;
 		display: block;
 		font-size: large;
-	}
-
-	/* Small Screen */
-	@media only screen and (max-width: 35rem) {
-		.copyright {
-			display: none;
-		}
 	}
 </style>
