@@ -25,7 +25,7 @@
 	<!-- {#each navigationRoutes as route}
 		<a href={route.href}>{route.title}</a>
 	{/each} -->
-	<h3>horix version</h3>
+	<SebagoInfoDisplay {SebagoDetails} />
 </div>
 
 <div class={'vertical-nav'}>
@@ -114,13 +114,14 @@
 		padding-right: 1rem;
 	}
 	.horizontal-nav {
-		display: flex;
+		/* display: flex;
 		flex-direction: row;
 		white-space: nowrap;
 		flex: 2;
 		justify-content: center;
 		font-size: larger;
-		column-gap: 2vw;
+		column-gap: 2vw; */
+		height: 100%;
 	}
 	a {
 		color: black;

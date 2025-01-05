@@ -7,6 +7,7 @@
 	import '../styles/text.css';
 	import type { PageData } from './$types';
 	import NavigationBar from '$lib/components/structure/NavigationBar.svelte';
+	import NavigationList from '$lib/components/structure/NavigationList.svelte';
 
 	export let data: PageData;
 
@@ -36,7 +37,7 @@
 		<span class={'header'}>
 			<div class={'page-header'}>
 				<span class="header-title">SEBAGO</span>
-				<NavigationBar SebagoDetails={data.SebagoDetails} />
+				<span class={'nav-list'}> <NavigationList orientation={'horizontal'} /></span>
 			</div>
 		</span>
 		<div class="content" id="scrollable-content">
@@ -49,7 +50,8 @@
 		</div>
 	</div>
 	<div class="sidebar">
-		<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
+		<NavigationBar SebagoDetails={data.SebagoDetails} />
+		<!-- <SebagoInfoDisplay SebagoDetails={data.SebagoDetails} /> -->
 	</div>
 </div>
 
@@ -112,8 +114,15 @@
 
 	/* Small Screen */
 	@media only screen and (max-width: 35rem) {
-		.sidebar {
+		.nav-list {
 			display: none;
+		}
+
+		.sidebar {
+			position: fixed;
+			top: 0;
+			right: 0;
+			z-index: 20;
 		}
 	}
 </style>
