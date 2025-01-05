@@ -48,11 +48,8 @@
 	</div>
 	<div class="sidebar">
 		<OpenableSidebar>
-			<span class={'nav-list'}> <NavigationList orientation={'vertical'} /></span>
+			<NavigationList orientation={'vertical'} />
 			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
-			<span class="copyright">
-				<Copyright SebagoDetails={data.SebagoDetails} />
-			</span>
 		</OpenableSidebar>
 	</div>
 </div>
@@ -145,6 +142,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
+			justify-content: space-between;
 		}
 	}
 </style>

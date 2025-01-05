@@ -22,7 +22,9 @@
 			<button on:click={toggleVerticalNav} class="close-button">
 				<span class="material-symbols-outlined"> close </span></button
 			>
-			<slot />
+			<div class="slot-content">
+				<slot />
+			</div>
 		</div>
 	{/if}
 </div>
@@ -39,9 +41,6 @@
 		padding: 0.3rem 0.1rem;
 	}
 	.close-button {
-		display: flex;
-		justify-content: end;
-		align-items: center;
 		color: var(--white);
 		margin-bottom: 0.5rem;
 		height: 3rem;
@@ -71,7 +70,14 @@
 		width: 50%;
 		height: 100%;
 		z-index: 10;
+		justify-items: end;
+		box-sizing: border-box;
+		padding: 1rem;
+	}
+
+	.slot-content {
 		display: flex;
 		flex-direction: column;
+		gap: 2rem;
 	}
 </style>

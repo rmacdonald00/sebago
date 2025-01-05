@@ -11,7 +11,7 @@
 
 <div class="content-box">
 	<div class="details">
-		<h1>Contact Us</h1>
+		<h3>Contact Us</h3>
 		<div>
 			Call us at {SebagoDetails.phoneNumber} or
 			<a href={mailtoLink} class={'mailto-button'}>Email us at {SebagoDetails.email}</a>
