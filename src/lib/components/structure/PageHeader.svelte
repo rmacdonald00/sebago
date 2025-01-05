@@ -4,10 +4,10 @@
 	export let SebagoDetails: SebagoInfo;
 </script>
 
-<div class={'header'}>
+<!-- <div class={'page-header'}>
 	<span class="header-title">SEBAGO</span>
 	<NavigationBar {SebagoDetails} />
-</div>
+</div> -->
 
 <style>
 	.header-title {
@@ -17,7 +17,7 @@
 		margin-left: 1rem;
 	}
 
-	.header {
+	.page-header {
 		background-color: var(--tan);
 		display: flex;
 		flex-wrap: wrap;

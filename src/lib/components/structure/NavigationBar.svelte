@@ -13,18 +13,19 @@
 		SetCanScrollMainContent(!isExpanded);
 	};
 
-	const navigationRoutes: { href: string; title: string }[] = [
-		{ href: '/', title: 'Home' },
-		{ href: '/about', title: 'About' },
-		{ href: '/cabins-and-rates', title: 'Cabins & Rates' },
-		{ href: '/gallery', title: 'Gallery' }
-	];
+	// const navigationRoutes: { href: string; title: string }[] = [
+	// 	{ href: '/', title: 'Home' },
+	// 	{ href: '/about', title: 'About' },
+	// 	{ href: '/cabins-and-rates', title: 'Cabins & Rates' },
+	// 	{ href: '/gallery', title: 'Gallery' }
+	// ];
 </script>
 
 <div class={'horizontal-nav'}>
-	{#each navigationRoutes as route}
+	<!-- {#each navigationRoutes as route}
 		<a href={route.href}>{route.title}</a>
-	{/each}
+	{/each} -->
+	<h3>horix version</h3>
 </div>
 
 <div class={'vertical-nav'}>
@@ -39,9 +40,9 @@
 			<button on:click={toggleVerticalNav} class="close-button">
 				<span class="material-symbols-outlined"> close </span></button
 			>
-			{#each navigationRoutes as route}
+			<!-- {#each navigationRoutes as route}
 				<a href={route.href} on:click={toggleVerticalNav}>{route.title}</a>
-			{/each}
+			{/each} -->
 			<SebagoInfoDisplay {SebagoDetails} />
 		</div>
 	{/if}

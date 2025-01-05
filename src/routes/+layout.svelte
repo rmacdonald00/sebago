@@ -6,6 +6,7 @@
 	import '../styles/display.css';
 	import '../styles/text.css';
 	import type { PageData } from './$types';
+	import NavigationBar from '$lib/components/structure/NavigationBar.svelte';
 
 	export let data: PageData;
 
@@ -32,7 +33,12 @@
 </svelte:head>
 <div class="container" id="vertical-content-list">
 	<div class={'vertical-stack'}>
-		<span class={'header'}><PageHeader SebagoDetails={data.SebagoDetails} /></span>
+		<span class={'header'}>
+			<div class={'page-header'}>
+				<span class="header-title">SEBAGO</span>
+				<NavigationBar SebagoDetails={data.SebagoDetails} />
+			</div>
+		</span>
 		<div class="content" id="scrollable-content">
 			<div class={'slot-content'}>
 				<slot />
@@ -48,6 +54,23 @@
 </div>
 
 <style>
+	.header-title {
+		color: var(--sebago-red);
+		font-size: 4.5rem;
+		font-family: 'Impact';
+		margin-left: 1rem;
+	}
+
+	.page-header {
+		background-color: var(--tan);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 2px var(--sebago-red) solid;
+		width: 100%;
+		box-sizing: border-box;
+	}
 	.slot-content {
 		padding: 1rem;
 		flex: 2;
