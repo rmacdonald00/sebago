@@ -61,7 +61,6 @@
 	}
 	.expanded-box {
 		background-color: var(--sebago-red);
-		color: var(--white);
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -73,6 +72,7 @@
 		justify-items: end;
 		box-sizing: border-box;
 		padding: 1rem;
+		overflow-y: auto;
 	}
 
 	.slot-content {

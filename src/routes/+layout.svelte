@@ -48,7 +48,7 @@
 	</div>
 	<div class="sidebar">
 		<OpenableSidebar>
-			<NavigationList orientation={'vertical'} />
+			<NavigationList orientation={'vertical'} textColor={'light'} />
 			<SebagoInfoDisplay SebagoDetails={data.SebagoDetails} />
 		</OpenableSidebar>
 	</div>
@@ -60,7 +60,7 @@
 		<div class={'vertical-stack'}>
 			<div class={'page-header'}>
 				<span class="header-title">SEBAGO</span>
-				<NavigationList orientation={'horizontal'} />
+				<NavigationList orientation={'horizontal'} textColor={'dark'} />
 			</div>
 			<div class={'slot-content'} id="scrollable-slot-content">
 				<slot />
@@ -106,7 +106,7 @@
 	}
 
 	/* Small Screen */
-	@media only screen and (max-width: 35rem) {
+	@media only screen and (max-width: 50rem) {
 		.desktop-layout,
 		.desktop-layout * {
 			display: none;
@@ -120,7 +120,7 @@
 	}
 
 	/* Big Screen */
-	@media only screen and (min-width: 35rem) {
+	@media only screen and (min-width: 50rem) {
 		.mobile-layout,
 		.mobile-layout * {
 			display: none;
@@ -132,16 +132,14 @@
 		}
 
 		.sidebar {
-			width: max(250px, 30%); /* Fixed width for the sidebar */
+			min-width: 15rem;
 			flex-shrink: 0; /* Prevent shrinking */
 			overflow: hidden; /* Prevent scrolling inside */
 			height: 100%;
 			background-color: var(--sebago-red);
 			padding: 1rem;
-			box-sizing: border-box;
 			display: flex;
 			flex-direction: column;
-			gap: 2rem;
 			justify-content: space-between;
 		}
 	}

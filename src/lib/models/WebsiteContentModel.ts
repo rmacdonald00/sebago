@@ -17,8 +17,7 @@ export interface SebagoInfo {
     phoneNumber: string;
     address: Address;
     email: string;
-    facebook: SocialMedia;
-    instagram: SocialMedia;
+    socialMediaAccounts: SocialMedia[];
     emailContentDefaults?: { subject?: string; body?: string };
 }
 
@@ -32,6 +31,7 @@ export interface Address {
 }
 
 interface SocialMedia {
+    platform: string;
     username: string;
     externalLink: string;
 }

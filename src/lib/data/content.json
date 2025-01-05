@@ -2,7 +2,7 @@
     "ModelVersionKey": 1,
     "SebagoContactDetails": {
         "name": "Sebago Resort",
-        "phoneNumber": "913-961-7497",
+        "phoneNumber": "913-717-0075",
         "email": "sebagoresort@yahoo.com",
         "address": {
             "street": "21735 Briarwood Lane",
@@ -15,14 +15,18 @@
                 -94.27597100534071
             ]
         },
-        "facebook": {
-            "username": "Sebago Resort",
-            "externalLink": "https://www.facebook.com/people/Sebago-Resort/100070741093493/?fref=ts"
-        },
-        "instagram": {
-            "username": "sebagoresort",
-            "externalLink": "https://www.instagram.com/sebagoresort/"
-        },
+        "socialMediaAccounts": [
+            {
+                "platform": "Facebook",
+                "username": "Sebago Resort",
+                "externalLink": "https://www.facebook.com/people/Sebago-Resort/100070741093493/?fref=ts"
+            },
+            {
+                "platform": "Instagram",
+                "username": "@sebagoresort",
+                "externalLink": "https://www.instagram.com/sebagoresort/"
+            }
+        ],
         "emailContentDefaults": {
             "subject": "Sebago Resort Website Contact",
             "body": "Here is some mo0re we!!rd <content>\n\nand some line breaks"

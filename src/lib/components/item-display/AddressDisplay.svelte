@@ -26,11 +26,20 @@
 	});
 </script>
 
-<span>{address.street} {address.city}, {address.state} {address.zip}</span>
+<span class="address">
+	<span>{address.street}</span>
+	<span>{address.city}, {address.state} {address.zip}</span>
+</span>
 <div class="map" bind:this={mapElement} />
 
 <style>
 	.map {
-		height: 200px;
+		height: 180px;
+		z-index: 5;
+	}
+
+	.address {
+		display: flex;
+		flex-direction: column;
 	}
 </style>
